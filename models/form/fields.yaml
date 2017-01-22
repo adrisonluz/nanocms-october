@@ -1,0 +1,47 @@
+fields:
+    titulo:
+        label: Título
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    origem:
+        label: Origem
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    classe:
+        label: Classe
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    tipo:
+        label: Tipo
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    pagina_id:
+        label: Página
+        oc.commentPosition: ''
+        span: auto
+        type: dropdown
+    ordem:
+        label: Ordem
+        oc.commentPosition: ''
+        span: auto
+        type: number
+    resposta:
+        label: 'Resposta automárica'
+        size: small
+        oc.commentPosition: ''
+        span: auto
+        type: richeditor
+    envio_email:
+        label: 'Enviar para email'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    ativo:
+        label: Ativo
+        span: right
+        default: 1
+        type: switch

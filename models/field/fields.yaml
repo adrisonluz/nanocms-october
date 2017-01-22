@@ -1,0 +1,50 @@
+fields:
+    nome:
+        label: Nome
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    valor:
+        label: Valor
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    placeholder:
+        label: Placeholder
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    mascara_id:
+        label: Máscara
+        oc.commentPosition: ''
+        span: auto
+        type: dropdown
+    tipo:
+        label: Tipo
+        oc.commentPosition: ''
+        options:
+            text: text
+            select: select
+            option: option
+            checkbox: checkbox
+            textarea: textarea
+            radio: radio
+            multiselect: multiselect
+            multicheckbox: multicheckbox
+            hidden: hidden
+            password: password
+        span: auto
+        type: dropdown
+    obrigatorio:
+        label: Obrigatório
+        span: auto
+        type: switch
+    ordem:
+        label: Ordem
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    ativo:
+        label: Ativo
+        span: auto
+        type: switch

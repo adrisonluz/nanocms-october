@@ -1,0 +1,27 @@
+columns:
+    id:
+        label: ID
+        type: number
+    titulo:
+        label: Título
+        type: text
+        searchable: true
+        sortable: true
+    origem:
+        label: Origem
+        type: text
+        searchable: true
+        sortable: true
+    tipo:
+        label: Tipo
+        type: text
+        searchable: true
+        sortable: true
+    ordem:
+        label: Ordem
+        type: number
+        sortable: true
+    ativo:
+        label: Ativo
+        type: switch
+        sortable: true

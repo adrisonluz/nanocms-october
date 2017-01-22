@@ -1,0 +1,26 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    nome:
+        label: Nome
+        type: text
+        searchable: true
+        sortable: true
+    valor:
+        label: Valor
+        type: text
+        searchable: true
+        sortable: true
+    mascara_id:
+        label: Máscara
+        type: text
+        searchable: true
+        sortable: true
+    tipo:
+        label: Tipo
+        type: text
+        searchable: true
+        sortable: true
