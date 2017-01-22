@@ -1,0 +1,6 @@
+plugin:
+    name: 'adrisonluz.nanocms::lang.plugin.name'
+    description: 'adrisonluz.nanocms::lang.plugin.description'
+    author: 'Adrison Luz'
+    icon: oc-icon-cube
+    homepage: ''
