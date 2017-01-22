@@ -3,3 +3,84 @@
 1.0.2:
     - 'Created table adrisonluz_nanocms_agendas'
     - builder_table_create_adrisonluz_nanocms_agendas.php
+1.0.3:
+    - 'Created table adrisonluz_nanocms_paginas'
+    - builder_table_create_adrisonluz_nanocms_paginas.php
+1.0.4:
+    - 'Created table adrisonluz_nanocms_banners'
+    - builder_table_create_adrisonluz_nanocms_banners.php
+1.0.5:
+    - 'Updated table adrisonluz_nanocms_agendas'
+    - builder_table_update_adrisonluz_nanocms_agendas.php
+1.0.6:
+    - 'Updated table adrisonluz_nanocms_paginas'
+    - builder_table_update_adrisonluz_nanocms_paginas.php
+1.0.7:
+    - 'Created table adrisonluz_nanocms_blocos'
+    - builder_table_create_adrisonluz_nanocms_blocos.php
+1.0.8:
+    - 'Created table adrisonluz_nanocms_categorias'
+    - builder_table_create_adrisonluz_nanocms_categorias.php
+1.0.9:
+    - 'Created table adrisonluz_nanocms_fields'
+    - builder_table_create_adrisonluz_nanocms_fields.php
+1.0.10:
+    - 'Updated table adrisonluz_nanocms_agendas'
+    - builder_table_update_adrisonluz_nanocms_agendas_2.php
+1.0.11:
+    - 'Updated table adrisonluz_nanocms_banners'
+    - builder_table_update_adrisonluz_nanocms_banners.php
+1.0.12:
+    - 'Updated table adrisonluz_nanocms_blocos'
+    - builder_table_update_adrisonluz_nanocms_blocos.php
+1.0.13:
+    - 'Updated table adrisonluz_nanocms_categorias'
+    - builder_table_update_adrisonluz_nanocms_categorias.php
+1.0.14:
+    - 'Updated table adrisonluz_nanocms_paginas'
+    - builder_table_update_adrisonluz_nanocms_paginas_2.php
+1.0.15:
+    - 'Created table adrisonluz_nanocms_forms'
+    - builder_table_create_adrisonluz_nanocms_forms.php
+1.0.16:
+    - 'Created table adrisonluz_nanocms_galerias'
+    - builder_table_create_adrisonluz_nanocms_galerias.php
+1.0.17:
+    - 'Created table adrisonluz_nanocms_mascaras'
+    - builder_table_create_adrisonluz_nanocms_mascaras.php
+1.0.18:
+    - 'Created table adrisonluz_nanocms_menus'
+    - builder_table_create_adrisonluz_nanocms_menus.php
+1.0.19:
+    - 'Created table adrisonluz_nanocms_menusitens'
+    - builder_table_create_adrisonluz_nanocms_menusitens.php
+1.0.20:
+    - 'Created table adrisonluz_nanocms_onlineviews'
+    - builder_table_create_adrisonluz_nanocms_onlineviews.php
+1.0.21:
+    - 'Created table adrisonluz_nanocms_posts'
+    - builder_table_create_adrisonluz_nanocms_posts.php
+1.0.22:
+    - 'Created table adrisonluz_nanocms_seo'
+    - builder_table_create_adrisonluz_nanocms_seo.php
+1.0.23:
+    - 'Created table adrisonluz_nanocms_views'
+    - builder_table_create_adrisonluz_nanocms_views.php
+1.0.24:
+    - 'Updated table adrisonluz_nanocms_agendas'
+    - builder_table_update_adrisonluz_nanocms_agendas_3.php
+1.0.25:
+    - 'Updated table adrisonluz_nanocms_banners'
+    - builder_table_update_adrisonluz_nanocms_banners_2.php
+1.0.26:
+    - 'Updated table adrisonluz_nanocms_blocos'
+    - builder_table_update_adrisonluz_nanocms_blocos_2.php
+1.0.27:
+    - 'Updated table adrisonluz_nanocms_categorias'
+    - builder_table_update_adrisonluz_nanocms_categorias_2.php
+1.0.28:
+    - 'Updated table adrisonluz_nanocms_onlineviews'
+    - builder_table_update_adrisonluz_nanocms_onlineviews.php
+1.0.29:
+    - 'Updated table adrisonluz_nanocms_paginas'
+    - builder_table_update_adrisonluz_nanocms_paginas_3.php
