@@ -1,0 +1,11 @@
+name: Forms
+modelClass: AdrisonLuz\NanoCms\Models\Form
+form: $/adrisonluz/nanocms/models/form/fields.yaml
+defaultRedirect: adrisonluz/nanocms/forms
+create:
+    redirect: 'adrisonluz/nanocms/forms/update/:id'
+    redirectClose: adrisonluz/nanocms/forms
+update:
+    redirect: adrisonluz/nanocms/forms
+    redirectClose: adrisonluz/nanocms/forms
+preview: {  }

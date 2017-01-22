@@ -19,6 +19,12 @@ navigation:
                 icon: icon-calendar
                 permissions:
                     - nanocms_agenda
+            forms:
+                label: Formulários
+                url: adrisonluz/nanocms/forms
+                icon: icon-list-alt
+                permissions:
+                    - nanocms_forms
 permissions:
     nanocms_agenda:
         tab: 'Nano CMS'

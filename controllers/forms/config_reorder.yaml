@@ -1,0 +1,5 @@
+title: Forms
+modelClass: AdrisonLuz\NanoCms\Models\Form
+nameFrom: ordem
+toolbar:
+    buttons: reorder_toolbar
