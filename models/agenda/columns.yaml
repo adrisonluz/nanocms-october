@@ -1,0 +1,24 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    titulo:
+        label: Título
+        type: text
+        searchable: true
+        sortable: true
+    data_ini:
+        label: 'Data Inicio'
+        type: datetime
+        searchable: true
+        sortable: true
+    data_fim:
+        label: 'Data Fim'
+        type: datetime
+        searchable: true
+        sortable: true
+    slug:
+        label: Slug
+        type: text

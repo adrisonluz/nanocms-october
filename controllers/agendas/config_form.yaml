@@ -1,0 +1,11 @@
+name: Agendas
+modelClass: AdrisonLuz\NanoCms\Models\Agenda
+form: $/adrisonluz/nanocms/models/agenda/fields.yaml
+defaultRedirect: adrisonluz/nanocms/agendas
+create:
+    redirect: 'adrisonluz/nanocms/agendas/update/:id'
+    redirectClose: adrisonluz/nanocms/agendas
+update:
+    redirect: adrisonluz/nanocms/agendas
+    redirectClose: adrisonluz/nanocms/agendas
+preview: {  }

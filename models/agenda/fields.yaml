@@ -1,0 +1,49 @@
+fields:
+    titulo:
+        label: Título
+        oc.commentPosition: ''
+        span: auto
+        placeholder: ''
+        default: ''
+        type: text
+    slug:
+        label: Slug
+        oc.commentPosition: ''
+        span: auto
+        placeholder: ''
+        default: ''
+        cssClass: ''
+        defaultFrom: titulo
+        preset:
+            field: titulo
+            type: slug
+        type: text
+    data_ini:
+        label: 'Data Início'
+        oc.commentPosition: ''
+        mode: datetime
+        span: auto
+        type: datepicker
+    conteudo:
+        label: Conteúdo
+        size: ''
+        oc.commentPosition: ''
+        span: auto
+        placeholder: ''
+        default: ''
+        cssClass: ''
+        preset:
+            field: titulo
+            type: ''
+        type: richeditor
+    data_fim:
+        label: 'Data Fim'
+        oc.commentPosition: ''
+        mode: datetime
+        span: auto
+        type: datepicker
+    ativo:
+        label: Ativo
+        span: auto
+        default: 1
+        type: switch

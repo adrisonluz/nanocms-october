@@ -1,4 +1,4 @@
-<?php namespace AdrisonLuz\Nanocms;
+<?php namespace AdrisonLuz\NanoCms;
 
 use System\Classes\PluginBase;
 

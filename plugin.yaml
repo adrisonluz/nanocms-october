@@ -4,3 +4,22 @@ plugin:
     author: 'Adrison Luz'
     icon: oc-icon-cube
     homepage: ''
+navigation:
+    agenda:
+        label: 'Nano CMS'
+        url: adrisonluz/nanocms/agendas
+        icon: icon-cube
+        permissions:
+            - nanocms_agenda
+        order: ''
+        sideMenu:
+            agenda:
+                label: Agenda
+                url: adrisonluz/nanocms/agendas
+                icon: icon-calendar
+                permissions:
+                    - nanocms_agenda
+permissions:
+    nanocms_agenda:
+        tab: 'Nano CMS | Agenda'
+        label: 'Nano CMS | Agenda'
