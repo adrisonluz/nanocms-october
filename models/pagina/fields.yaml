@@ -1,0 +1,42 @@
+fields:
+    titulo:
+        label: Título
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        oc.commentPosition: ''
+        span: auto
+        preset:
+            field: titulo
+            type: slug
+        type: text
+    conteudo:
+        label: Conteúdo
+        size: large
+        oc.commentPosition: ''
+        span: auto
+        type: richeditor
+    resumo:
+        label: Resumo
+        size: small
+        oc.commentPosition: ''
+        span: auto
+        type: textarea
+    ativo:
+        label: Ativo
+        span: right
+        default: 1
+        type: switch
+    imagem:
+        label: Imagem
+        span: auto
+        oc.commentPosition: ''
+        mode: image
+        type: mediafinder
+    galeria_id:
+        label: Galeria
+        span: auto
+        oc.commentPosition: ''
+        type: dropdown

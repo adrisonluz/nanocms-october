@@ -1,0 +1,11 @@
+name: Galerias
+modelClass: AdrisonLuz\NanoCms\Models\Galeria
+form: $/adrisonluz/nanocms/models/galeria/fields.yaml
+defaultRedirect: adrisonluz/nanocms/galerias
+create:
+    redirect: 'adrisonluz/nanocms/galerias/update/:id'
+    redirectClose: adrisonluz/nanocms/galerias
+update:
+    redirect: adrisonluz/nanocms/galerias
+    redirectClose: adrisonluz/nanocms/galerias
+preview: {  }

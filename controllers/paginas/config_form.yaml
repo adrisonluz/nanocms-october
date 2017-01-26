@@ -1,0 +1,11 @@
+name: Paginas
+modelClass: AdrisonLuz\NanoCms\Models\Pagina
+form: $/adrisonluz/nanocms/models/pagina/fields.yaml
+defaultRedirect: adrisonluz/nanocms/paginas
+create:
+    redirect: 'adrisonluz/nanocms/paginas/update/:id'
+    redirectClose: adrisonluz/nanocms/paginas
+update:
+    redirect: adrisonluz/nanocms/paginas
+    redirectClose: adrisonluz/nanocms/paginas
+preview: {  }

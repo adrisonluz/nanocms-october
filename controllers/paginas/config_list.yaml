@@ -1,0 +1,11 @@
+title: Paginas
+modelClass: AdrisonLuz\NanoCms\Models\Pagina
+list: $/adrisonluz/nanocms/models/pagina/columns.yaml
+recordUrl: 'adrisonluz/nanocms/paginas/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

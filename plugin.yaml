@@ -13,18 +13,36 @@ navigation:
             - nanocms_agenda
         order: ''
         sideMenu:
-            banners:
-                label: Banners
-                url: adrisonluz/nanocms/banners
-                icon: icon-image
+            posts:
+                label: Posts
+                url: adrisonluz/nanocms/posts
+                icon: icon-pencil-square-o
                 permissions:
-                    - nanocms_banners
+                    - nanocms_posts
             categorias:
                 label: Categorias
                 url: adrisonluz/nanocms/categorias
                 icon: icon-sitemap
                 permissions:
                     - nanocms_categorias
+            banners:
+                label: Banners
+                url: adrisonluz/nanocms/banners
+                icon: icon-image
+                permissions:
+                    - nanocms_banners
+            paginas:
+                label: Páginas
+                url: adrisonluz/nanocms/paginas
+                icon: icon-file-text-o
+                permissions:
+                    - nanocms_paginas
+            galerias:
+                label: Galerias
+                url: adrisonluz/nanocms/galerias
+                icon: icon-film
+                permissions:
+                    - nanocms_galerias
             forms:
                 label: Formulários
                 url: adrisonluz/nanocms/forms
@@ -45,12 +63,6 @@ navigation:
                 permissions:
                     - nanocms_forms
                     - nanocms_fields
-            agenda:
-                label: Agenda
-                url: adrisonluz/nanocms/agendas
-                icon: icon-calendar
-                permissions:
-                    - nanocms_agenda
             menus:
                 label: Menus
                 url: adrisonluz/nanocms/menus
@@ -63,6 +75,12 @@ navigation:
                 icon: icon-link
                 permissions:
                     - nanocms_menus
+            agenda:
+                label: Agenda
+                url: adrisonluz/nanocms/agendas
+                icon: icon-calendar
+                permissions:
+                    - nanocms_agenda
 permissions:
     nanocms_agenda:
         tab: 'Nano CMS'

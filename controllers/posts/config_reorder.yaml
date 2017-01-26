@@ -1,0 +1,5 @@
+title: Posts
+modelClass: AdrisonLuz\NanoCms\Models\Post
+nameFrom: ordem
+toolbar:
+    buttons: reorder_toolbar

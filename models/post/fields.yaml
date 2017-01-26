@@ -1,0 +1,56 @@
+fields:
+    titulo:
+        label: Título
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        oc.commentPosition: ''
+        span: auto
+        preset:
+            field: titulo
+            type: slug
+        type: text
+    data:
+        label: Data
+        oc.commentPosition: ''
+        mode: datetime
+        span: auto
+        type: datepicker
+    categoria_id:
+        label: Categoria
+        span: auto
+        oc.commentPosition: ''
+        type: dropdown
+    ordem:
+        label: Ordem
+        oc.commentPosition: ''
+        span: auto
+        type: number
+    conteudo:
+        label: Conteúdo
+        size: ''
+        oc.commentPosition: ''
+        span: auto
+        type: richeditor
+    destaque:
+        label: Destaque
+        span: auto
+        type: switch
+    ativo:
+        label: Ativo
+        span: auto
+        default: 1
+        type: switch
+    imagem:
+        label: Imagem
+        oc.commentPosition: ''
+        mode: image
+        span: auto
+        type: mediafinder
+    galeria_id:
+        label: Galeria
+        oc.commentPosition: ''
+        span: auto
+        type: dropdown

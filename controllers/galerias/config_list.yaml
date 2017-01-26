@@ -1,0 +1,11 @@
+title: Galerias
+modelClass: AdrisonLuz\NanoCms\Models\Galeria
+list: $/adrisonluz/nanocms/models/galeria/columns.yaml
+recordUrl: 'adrisonluz/nanocms/galerias/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
