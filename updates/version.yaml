@@ -90,3 +90,24 @@
 1.0.31:
     - 'Updated table adrisonluz_nanocms_banners'
     - builder_table_update_adrisonluz_nanocms_banners_3.php
+1.0.32:
+    - 'Updated table adrisonluz_nanocms_forms'
+    - builder_table_update_adrisonluz_nanocms_forms.php
+1.0.33:
+    - 'Updated table adrisonluz_nanocms_fields'
+    - builder_table_update_adrisonluz_nanocms_fields_2.php
+1.0.34:
+    - 'Updated table adrisonluz_nanocms_forms'
+    - builder_table_update_adrisonluz_nanocms_forms_2.php
+1.0.35:
+    - 'Updated table adrisonluz_nanocms_agendas'
+    - builder_table_update_adrisonluz_nanocms_agendas_4.php
+1.0.36:
+    - 'Updated table adrisonluz_nanocms_menusitens'
+    - builder_table_update_adrisonluz_nanocms_menusitens.php
+1.0.37:
+    - 'Updated table adrisonluz_nanocms_menus'
+    - builder_table_update_adrisonluz_nanocms_menus.php
+1.0.38:
+    - 'Updated table adrisonluz_nanocms_categorias'
+    - builder_table_update_adrisonluz_nanocms_categorias_3.php

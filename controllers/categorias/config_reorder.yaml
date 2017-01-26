@@ -1,0 +1,5 @@
+title: Categorias
+modelClass: AdrisonLuz\NanoCms\Models\Categoria
+nameFrom: ordem
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,39 @@
+fields:
+    titulo:
+        label: Título
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    tipo:
+        label: Tipo
+        oc.commentPosition: ''
+        options:
+            'Header Principal': header
+            'Header Secundário': header_sec
+            Footer: footer
+            Lateral: lateral
+            Especial: especial
+        span: auto
+        type: dropdown
+    ativo:
+        label: Ativo
+        span: right
+        default: 1
+        type: switch
+tabs:
+    fields:
+        repeater1:
+            label: Repeater
+            oc.commentPosition: ''
+            prompt: 'Add new item'
+            span: auto
+            type: repeater
+            tab: 'Tab 1'
+            form:
+                fields: {  }
+        itens:
+            label: Itens
+            span: full
+            oc.commentPosition: ''
+            type: checkboxlist
+            tab: 'Tab 1'

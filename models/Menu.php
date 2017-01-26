@@ -21,8 +21,18 @@ class Menu extends Model
      */
     public $timestamps = false;
 
+    // Permite JSON em itens
+    protected $jsonable = ['itens'];
+
     /**
      * @var string The database table used by the model.
      */
     public $table = 'adrisonluz_nanocms_menus';
+
+    // Retorna todas as páginas
+    public function getPaginaIdOptions(){
+        $paginas = Pagina::lists('titulo','id');
+        $paginas[0] = 'Todas';
+        return $paginas;
+    }
 }

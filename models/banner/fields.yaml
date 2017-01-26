@@ -34,24 +34,30 @@ fields:
         mode: datetime
         span: auto
         type: datepicker
-    video:
-        label: Video
-        oc.commentPosition: ''
-        span: auto
-        type: text
     conteudo:
         label: Conteúdo
         size: small
         oc.commentPosition: ''
         span: auto
         type: richeditor
+    video:
+        label: Video
+        oc.commentPosition: ''
+        span: auto
+        type: text
     ordem:
         label: Ordem
         oc.commentPosition: ''
-        span: left
+        span: right
         type: number
     ativo:
         label: Ativo
-        span: auto
+        span: right
         default: 1
         type: switch
+    imagem:
+        label: Imagem
+        span: auto
+        oc.commentPosition: ''
+        mode: image
+        type: mediafinder

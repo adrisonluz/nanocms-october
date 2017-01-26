@@ -1,4 +1,5 @@
 title: Fields
 modelClass: AdrisonLuz\NanoCms\Models\Field
+nameFrom: ordem
 toolbar:
     buttons: reorder_toolbar

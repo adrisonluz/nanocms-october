@@ -1,0 +1,5 @@
+title: MenuItens
+modelClass: AdrisonLuz\NanoCms\Models\MenuItem
+nameFrom: id
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,11 @@
+name: MenuItens
+modelClass: AdrisonLuz\NanoCms\Models\MenuItem
+form: $/adrisonluz/nanocms/models/menuitem/fields.yaml
+defaultRedirect: adrisonluz/nanocms/menuitens
+create:
+    redirect: 'adrisonluz/nanocms/menuitens/update/:id'
+    redirectClose: adrisonluz/nanocms/menuitens
+update:
+    redirect: adrisonluz/nanocms/menuitens
+    redirectClose: adrisonluz/nanocms/menuitens
+preview: {  }

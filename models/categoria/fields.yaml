@@ -1,0 +1,41 @@
+fields:
+    titulo:
+        label: Título
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        oc.commentPosition: ''
+        span: auto
+        preset:
+            field: titulo
+            type: slug
+        type: text
+    categoriapai_id:
+        label: 'Categoria Pai'
+        oc.commentPosition: ''
+        span: auto
+        type: dropdown
+    ordem:
+        label: Ordem
+        oc.commentPosition: ''
+        span: auto
+        type: number
+    conteudo:
+        label: Conteúdo
+        size: ''
+        oc.commentPosition: ''
+        span: left
+        type: richeditor
+    ativo:
+        label: Ativo
+        span: auto
+        default: 1
+        type: switch
+    imagem:
+        label: Imagem
+        oc.commentPosition: ''
+        mode: image
+        span: left
+        type: mediafinder

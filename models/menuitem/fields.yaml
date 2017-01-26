@@ -1,0 +1,26 @@
+fields:
+    titulo:
+        label: Título
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    menupai_id:
+        label: 'Menu Pai'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    pagina_id:
+        label: Página
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    link:
+        label: Link
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    ativo:
+        label: Ativo
+        span: right
+        default: 1
+        type: switch

@@ -26,11 +26,6 @@ class Field extends Model
      */
     public $table = 'adrisonluz_nanocms_fields';
 
-    // Retorna todas as máscaras
-    public function getMasracaIdOptions(){
-        return Mascara::lists('nome','id');
-    }
-
     public function getMascaraIdOptions(){
         return Mascara::lists('nome','id');
     }

@@ -1,0 +1,11 @@
+name: Categorias
+modelClass: AdrisonLuz\NanoCms\Models\Categoria
+form: $/adrisonluz/nanocms/models/categoria/fields.yaml
+defaultRedirect: adrisonluz/nanocms/categorias
+create:
+    redirect: 'adrisonluz/nanocms/categorias/update/:id'
+    redirectClose: adrisonluz/nanocms/categorias
+update:
+    redirect: adrisonluz/nanocms/categorias
+    redirectClose: adrisonluz/nanocms/categorias
+preview: {  }

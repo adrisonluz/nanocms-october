@@ -1,0 +1,26 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    titulo:
+        label: Título
+        type: text
+        searchable: true
+        sortable: true
+    pagina_id:
+        label: Página
+        type: text
+        searchable: true
+        sortable: true
+    link:
+        label: Link
+        type: text
+        searchable: true
+        sortable: true
+    ativo:
+        label: Ativo
+        type: text
+        searchable: true
+        sortable: true

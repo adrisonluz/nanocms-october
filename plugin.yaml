@@ -19,6 +19,12 @@ navigation:
                 icon: icon-image
                 permissions:
                     - nanocms_banners
+            categorias:
+                label: Categorias
+                url: adrisonluz/nanocms/categorias
+                icon: icon-sitemap
+                permissions:
+                    - nanocms_categorias
             forms:
                 label: Formulários
                 url: adrisonluz/nanocms/forms
@@ -32,12 +38,31 @@ navigation:
                 permissions:
                     - nanocms_fields
                     - nanocms_forms
+            mascaras:
+                label: Máscaras
+                url: adrisonluz/nanocms/mascara
+                icon: icon-terminal
+                permissions:
+                    - nanocms_forms
+                    - nanocms_fields
             agenda:
                 label: Agenda
                 url: adrisonluz/nanocms/agendas
                 icon: icon-calendar
                 permissions:
                     - nanocms_agenda
+            menus:
+                label: Menus
+                url: adrisonluz/nanocms/menus
+                icon: icon-exchange
+                permissions:
+                    - nanocms_menus
+            menu-itens:
+                label: 'Menu Itens'
+                url: adrisonluz/nanocms/menuitens
+                icon: icon-link
+                permissions:
+                    - nanocms_menus
 permissions:
     nanocms_agenda:
         tab: 'Nano CMS'

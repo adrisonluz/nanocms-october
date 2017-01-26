@@ -1,0 +1,11 @@
+name: Menus
+modelClass: AdrisonLuz\NanoCms\Models\Menu
+form: $/adrisonluz/nanocms/models/menu/fields.yaml
+defaultRedirect: adrisonluz/nanocms/menus
+create:
+    redirect: 'adrisonluz/nanocms/menus/update/:id'
+    redirectClose: adrisonluz/nanocms/menus
+update:
+    redirect: adrisonluz/nanocms/menus
+    redirectClose: adrisonluz/nanocms/menus
+preview: {  }

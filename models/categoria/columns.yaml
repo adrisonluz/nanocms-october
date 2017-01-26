@@ -1,0 +1,31 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    titulo:
+        label: Título
+        type: text
+        searchable: true
+        sortable: true
+    categoriapai_id:
+        label: 'Categoria Pai'
+        type: text
+        searchable: true
+        sortable: true
+    slug:
+        label: Slug
+        type: text
+        searchable: true
+        sortable: true
+    ordem:
+        label: Ordem
+        type: number
+        searchable: true
+        sortable: true
+    ativo:
+        label: Ativo
+        type: text
+        searchable: true
+        sortable: true

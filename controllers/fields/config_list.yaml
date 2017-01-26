@@ -3,8 +3,9 @@ modelClass: AdrisonLuz\NanoCms\Models\Field
 list: $/adrisonluz/nanocms/models/field/columns.yaml
 recordUrl: 'adrisonluz/nanocms/fields/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
-showSetup: true
-showCheckboxes: true
+showSetup: 1
+showCheckboxes: 1
+showSorting: 1
 toolbar:
     buttons: list_toolbar
     search:
