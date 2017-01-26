@@ -47,4 +47,5 @@ fields:
     ativo:
         label: Ativo
         span: auto
+        default: 1
         type: switch

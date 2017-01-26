@@ -25,4 +25,13 @@ class Field extends Model
      * @var string The database table used by the model.
      */
     public $table = 'adrisonluz_nanocms_fields';
+
+    // Retorna todas as máscaras
+    public function getMasracaIdOptions(){
+        return Mascara::lists('nome','id');
+    }
+
+    public function getMascaraIdOptions(){
+        return Mascara::lists('nome','id');
+    }
 }

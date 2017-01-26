@@ -7,24 +7,37 @@ plugin:
 navigation:
     agenda:
         label: 'Nano CMS'
-        url: adrisonluz/nanocms/agendas
+        url: adrisonluz/nanocms/banners
         icon: icon-cube
         permissions:
             - nanocms_agenda
         order: ''
         sideMenu:
-            agenda:
-                label: Agenda
-                url: adrisonluz/nanocms/agendas
-                icon: icon-calendar
+            banners:
+                label: Banners
+                url: adrisonluz/nanocms/banners
+                icon: icon-image
                 permissions:
-                    - nanocms_agenda
+                    - nanocms_banners
             forms:
                 label: Formulários
                 url: adrisonluz/nanocms/forms
                 icon: icon-list-alt
                 permissions:
                     - nanocms_forms
+            fields:
+                label: Fields
+                url: adrisonluz/nanocms/fields
+                icon: icon-list
+                permissions:
+                    - nanocms_fields
+                    - nanocms_forms
+            agenda:
+                label: Agenda
+                url: adrisonluz/nanocms/agendas
+                icon: icon-calendar
+                permissions:
+                    - nanocms_agenda
 permissions:
     nanocms_agenda:
         tab: 'Nano CMS'

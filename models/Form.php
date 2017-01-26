@@ -21,12 +21,21 @@ class Form extends Model
      */
     public $timestamps = false;
 
+    // Permite JSON em fields
+    protected $jsonable = ['fields'];
+
     /**
      * @var string The database table used by the model.
      */
     public $table = 'adrisonluz_nanocms_forms';
 
+    // Retorna todas as páginas
     public function getPaginaIdOptions(){
         return Pagina::lists('titulo','id');
+    }
+
+    // Retorna todos os fields
+    public function getFieldsOptions(){
+        return Field::lists('nome','id');
     }
 }

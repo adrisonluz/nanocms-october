@@ -1,0 +1,5 @@
+title: Banners
+modelClass: AdrisonLuz\NanoCms\Models\Banner
+nameFrom: ordem
+toolbar:
+    buttons: reorder_toolbar

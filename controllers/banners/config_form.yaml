@@ -1,0 +1,11 @@
+name: Banners
+modelClass: AdrisonLuz\NanoCms\Models\Banner
+form: $/adrisonluz/nanocms/models/banner/fields.yaml
+defaultRedirect: adrisonluz/nanocms/banners
+create:
+    redirect: 'adrisonluz/nanocms/banners/update/:id'
+    redirectClose: adrisonluz/nanocms/banners
+update:
+    redirect: adrisonluz/nanocms/banners
+    redirectClose: adrisonluz/nanocms/banners
+preview: {  }

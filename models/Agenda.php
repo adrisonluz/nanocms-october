@@ -21,6 +21,10 @@ class Agenda extends Model
      */
     public $timestamps = false;
 
+    public $attachOne = [
+          'imagem' => ['System\Models\File']
+      ];
+
     /**
      * @var string The database table used by the model.
      */

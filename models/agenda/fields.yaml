@@ -47,3 +47,9 @@ fields:
         span: auto
         default: 1
         type: switch
+    imagem:
+        label: Imagem
+        oc.commentPosition: ''
+        mode: image
+        span: left
+        type: mediafinder

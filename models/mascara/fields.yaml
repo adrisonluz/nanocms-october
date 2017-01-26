@@ -1,0 +1,11 @@
+fields:
+    nome:
+        label: Nome
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    mask:
+        label: Máscara
+        oc.commentPosition: ''
+        span: auto
+        type: text

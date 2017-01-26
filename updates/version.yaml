@@ -87,3 +87,6 @@
 1.0.30:
     - 'Updated table adrisonluz_nanocms_fields'
     - builder_table_update_adrisonluz_nanocms_fields.php
+1.0.31:
+    - 'Updated table adrisonluz_nanocms_banners'
+    - builder_table_update_adrisonluz_nanocms_banners_3.php

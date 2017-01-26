@@ -1,0 +1,5 @@
+title: Mascara
+modelClass: AdrisonLuz\NanoCms\Models\Mascara
+nameFrom: id
+toolbar:
+    buttons: reorder_toolbar

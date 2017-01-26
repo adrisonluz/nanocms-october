@@ -1,0 +1,25 @@
+columns:
+    ordem:
+        label: Ordem
+        type: number
+        sortable: true
+    titulo:
+        label: Título
+        type: text
+        searchable: true
+    tipo:
+        label: Tipo
+        type: text
+        searchable: true
+    pagina_id:
+        label: Página
+        type: text
+        searchable: true
+    data_ini:
+        label: 'Data Ini'
+        type: date
+        searchable: true
+    data_fim:
+        label: 'Data Fim'
+        type: date
+        searchable: true

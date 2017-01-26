@@ -1,0 +1,4 @@
+title: Fields
+modelClass: AdrisonLuz\NanoCms\Models\Field
+toolbar:
+    buttons: reorder_toolbar

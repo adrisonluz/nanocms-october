@@ -1,0 +1,11 @@
+name: Mascara
+modelClass: AdrisonLuz\NanoCms\Models\Mascara
+form: $/adrisonluz/nanocms/models/mascara/fields.yaml
+defaultRedirect: adrisonluz/nanocms/mascara
+create:
+    redirect: 'adrisonluz/nanocms/mascara/update/:id'
+    redirectClose: adrisonluz/nanocms/mascara
+update:
+    redirect: adrisonluz/nanocms/mascara
+    redirectClose: adrisonluz/nanocms/mascara
+preview: {  }

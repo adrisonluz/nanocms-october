@@ -4,52 +4,54 @@ fields:
         oc.commentPosition: ''
         span: auto
         type: text
-    origem:
-        label: Origem
-        oc.commentPosition: ''
-        span: auto
-        type: text
-    classe:
-        label: Classe
+    link:
+        label: Link
         oc.commentPosition: ''
         span: auto
         type: text
     tipo:
         label: Tipo
         oc.commentPosition: ''
+        options:
+            banner: banner
+            modal: modal
         span: auto
-        type: text
+        type: dropdown
     pagina_id:
         label: Página
         oc.commentPosition: ''
         span: auto
         type: dropdown
-    ordem:
-        label: Ordem
+    data_ini:
+        label: 'Data início'
+        oc.commentPosition: ''
+        mode: datetime
+        span: auto
+        type: datepicker
+    data_fim:
+        label: 'Data fim'
+        oc.commentPosition: ''
+        mode: datetime
+        span: auto
+        type: datepicker
+    video:
+        label: Video
         oc.commentPosition: ''
         span: auto
-        type: number
-    resposta:
-        label: 'Resposta automárica'
+        type: text
+    conteudo:
+        label: Conteúdo
         size: small
         oc.commentPosition: ''
         span: auto
         type: richeditor
-    envio_email:
-        label: 'Enviar para email'
+    ordem:
+        label: Ordem
         oc.commentPosition: ''
-        span: auto
-        type: text
+        span: left
+        type: number
     ativo:
         label: Ativo
-        span: right
+        span: auto
         default: 1
         type: switch
-tabs:
-    fields:
-        fields:
-            label: Fields
-            span: full
-            oc.commentPosition: ''
-            type: checkboxlist
-            tab: Fields

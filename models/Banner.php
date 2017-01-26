@@ -21,8 +21,16 @@ class Banner extends Model
      */
     public $timestamps = false;
 
+    public $attachOne = [
+        'imagem' => ['System\Models\File']
+    ];
+
     /**
      * @var string The database table used by the model.
      */
     public $table = 'adrisonluz_nanocms_banners';
+
+    public function getPaginaIdOptions(){
+        return Pagina::lists('titulo','id');
+    }
 }
