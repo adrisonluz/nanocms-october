@@ -25,4 +25,9 @@ class Pagina extends Model
      * @var string The database table used by the model.
      */
     public $table = 'adrisonluz_nanocms_paginas';
+
+    // Retorna todas as galerias
+    public function getGaleriaIdOptions(){
+      return Galeria::lists('titulo','id');
+    }
 }

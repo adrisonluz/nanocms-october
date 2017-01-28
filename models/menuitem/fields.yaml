@@ -5,10 +5,10 @@ fields:
         span: auto
         type: text
     menupai_id:
-        label: 'Menu Pai'
+        label: 'Menu Item Pai'
         oc.commentPosition: ''
         span: auto
-        type: text
+        type: dropdown
     pagina_id:
         label: Página
         oc.commentPosition: ''

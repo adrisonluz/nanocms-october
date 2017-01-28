@@ -28,6 +28,11 @@ fields:
         oc.commentPosition: ''
         span: auto
         type: number
+    galeria_id:
+        label: Galeria
+        oc.commentPosition: ''
+        span: auto
+        type: dropdown
     conteudo:
         label: Conteúdo
         size: ''
@@ -36,21 +41,16 @@ fields:
         type: richeditor
     destaque:
         label: Destaque
-        span: auto
+        span: right
         type: switch
     ativo:
         label: Ativo
-        span: auto
+        span: right
         default: 1
         type: switch
     imagem:
         label: Imagem
         oc.commentPosition: ''
         mode: image
-        span: auto
+        span: left
         type: mediafinder
-    galeria_id:
-        label: Galeria
-        oc.commentPosition: ''
-        span: auto
-        type: dropdown

@@ -12,20 +12,23 @@ fields:
             field: titulo
             type: slug
         type: text
-    tipo:
-        label: Tipo
-        oc.commentPosition: ''
-        span: auto
-        type: dropdown
     conteudo:
         label: Conteúdo
         size: ''
         oc.commentPosition: ''
         span: auto
         type: richeditor
+    tipo:
+        label: Tipo
+        oc.commentPosition: ''
+        options:
+            Shadowbox: shadowbox
+        span: auto
+        type: dropdown
     ativo:
         label: Ativo
         span: right
+        default: 1
         type: switch
 tabs:
     fields:

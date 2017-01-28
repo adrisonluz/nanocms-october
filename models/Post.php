@@ -25,4 +25,14 @@ class Post extends Model
      * @var string The database table used by the model.
      */
     public $table = 'adrisonluz_nanocms_posts';
+
+    // Retorna todas as categorias
+    public function getCategoriaIdOptions(){
+        return Categoria::lists('titulo','id');
+    }
+
+    // Retorna todas as galerias
+    public function getGaleriaIdOptions(){
+        return Galeria::lists('titulo','id');
+    }
 }

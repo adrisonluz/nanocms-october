@@ -35,4 +35,9 @@ class Menu extends Model
         $paginas[0] = 'Todas';
         return $paginas;
     }
+
+    // Retorna todos os itens de menu
+    public function getItensOptions(){
+        return MenuItem::lists('titulo','id');
+    }
 }

@@ -25,4 +25,9 @@ class MenuItem extends Model
      * @var string The database table used by the model.
      */
     public $table = 'adrisonluz_nanocms_menusitens';
+
+    // Retorna todos os itens de menu
+    public function getMenupaiIdOptions(){
+        return MenuItem::lists('titulo','id');
+    }
 }

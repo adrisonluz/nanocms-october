@@ -37,6 +37,6 @@ fields:
         type: mediafinder
     galeria_id:
         label: Galeria
-        span: auto
         oc.commentPosition: ''
+        span: right
         type: dropdown

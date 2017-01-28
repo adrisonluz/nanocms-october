@@ -25,4 +25,9 @@ class Categoria extends Model
      * @var string The database table used by the model.
      */
     public $table = 'adrisonluz_nanocms_categorias';
+
+    // Retorna todas as categorias
+    public function getCategoriapaiIdOptions(){
+        return Categoria::lists('titulo','id');
+    }
 }
