@@ -6,6 +6,9 @@ class Plugin extends PluginBase
 {
     public function registerComponents()
     {
+      return [
+        'AdrisonLuz\NanoCms\Components\Categorias' => 'categorias'
+      ];
     }
 
     public function registerSettings()
