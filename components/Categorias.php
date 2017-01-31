@@ -16,14 +16,26 @@ class Categorias extends ComponentBase
 
     public function defineProperties()
     {
-        return [];
+        return [
+          'debug' => [
+               'title'             => 'Debug',
+               'description'       => 'Permite debugar o componente.',
+               'default'           => false,
+               'type'              => 'checkbox',
+          ],
+        ];
     }
 
     public function onRun()
     {
-        $categorias = Categoria::all();
+        $categorias = Categoria::ativos();
 
         $this->page['categorias'] = $categorias;
+
+        // Debug
+        if($this->property('debug') == 1){
+            dd(Categoria::with('pai')->where('ativo','=',1)->get()->toArray());
+        }
     }
 
 }

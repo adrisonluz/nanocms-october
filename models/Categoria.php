@@ -21,6 +21,10 @@ class Categoria extends Model
      */
     public $timestamps = false;
 
+    public $belongsTo = [
+        'pai' => ['AdrisonLuz\NanoCms\Models\Categoria', 'key' => 'categoriapai_id', 'otherKey' => 'id']
+    ];
+
     /**
      * @var string The database table used by the model.
      */
@@ -28,6 +32,14 @@ class Categoria extends Model
 
     // Retorna todas as categorias
     public function getCategoriapaiIdOptions(){
-        return Categoria::lists('titulo','id');
+        $categorias = Categoria::lists('titulo','id');
+        $categorias[0] = 'Nenhuma';
+
+        return $categorias;
+    }
+
+    public function scopeAtivos($query)
+    {
+      return $query->where('ativo','=',1)->get();
     }
 }

@@ -25,6 +25,10 @@ class Banner extends Model
         'imagem' => ['System\Models\File']
     ];
 
+    public $belongsTo = [
+        'pagina' => ['AdrisonLuz\NanoCms\Models\Pagina']
+    ];
+
     /**
      * @var string The database table used by the model.
      */
@@ -32,5 +36,10 @@ class Banner extends Model
 
     public function getPaginaIdOptions(){
         return Pagina::lists('titulo','id');
+    }
+
+    public function scopeAtivos($query)
+    {
+      return $query->where('ativo','=',1)->get();
     }
 }

@@ -29,4 +29,9 @@ class Agenda extends Model
      * @var string The database table used by the model.
      */
     public $table = 'adrisonluz_nanocms_agendas';
+
+    public function scopeAtivos($query)
+    {
+      return $query->where('ativo','=',1)->get();
+    }
 }
