@@ -1,6 +1,7 @@
 <?php namespace AdrisonLuz\NanoCms\Components;
 
 use Cms\Classes\ComponentBase;
+use AdrisonLuz\NanoCms\Models\Form;
 
 class Forms extends ComponentBase
 {
@@ -8,33 +9,33 @@ class Forms extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'Forms Component',
-            'description' => 'No description provided yet...'
+            'name'        => 'Forms',
+            'description' => 'Lista todos os formulários cadastrados.'
         ];
     }
 
     public function defineProperties()
-      {
-          return [
-            'debug' => [
-                 'title'             => 'Debug',
-                 'description'       => 'Permite debugar o componente.',
-                 'default'           => false,
-                 'type'              => 'checkbox',
-            ],
-          ];
-      }
+    {
+        return [
+          'debug' => [
+               'title'             => 'Debug',
+               'description'       => 'Permite debugar o componente.',
+               'default'           => false,
+               'type'              => 'checkbox',
+          ],
+        ];
+    }
 
-      public function onRun()
-      {
-          $categorias = Categoria::all();
+    public function onRun()
+    {
+        $forms = Form::with('pagina')->ativos();
 
-          $this->page['categorias'] = $categorias;
+        $this->page['forms'] = $forms;
 
-          // Debug
-          if($this->property('debug') == 1){
-              dd(Categoria::all()->toArray());
-          }
-      }
+        // Debug
+        if($this->property('debug') == 1){
+            dd($forms->toArray());
+        }
+    }
 
 }

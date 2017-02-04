@@ -24,6 +24,10 @@ class Form extends Model
     // Permite JSON em fields
     protected $jsonable = ['fields'];
 
+    public $belongsTo = [
+        'pagina' => ['AdrisonLuz\NanoCms\Models\Pagina']
+    ];
+
     /**
      * @var string The database table used by the model.
      */
@@ -31,11 +35,18 @@ class Form extends Model
 
     // Retorna todas as páginas
     public function getPaginaIdOptions(){
-        return Pagina::lists('titulo','id');
+        $paginas = Pagina::lists('titulo','id');
+        $paginas[0] = 'Todas';
+        return $paginas;
     }
 
     // Retorna todos os fields
     public function getFieldsOptions(){
         return Field::lists('nome','id');
+    }
+
+    public function scopeAtivos($query)
+    {
+      return $query->where('ativo','=',1)->get();
     }
 }

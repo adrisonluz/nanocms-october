@@ -21,6 +21,14 @@ class Field extends Model
      */
     public $timestamps = false;
 
+    public $belongsToMany = [
+        'forms' => ['AdrisonLuz\NanoCms\Models\Form','fields']
+    ];
+
+    public $belongsTo = [
+        'pai' => ['AdrisonLuz\NanoCms\Models\Field', 'key' => 'inputpai_id', 'otherKey' => 'id']
+    ];
+
     /**
      * @var string The database table used by the model.
      */
@@ -28,5 +36,10 @@ class Field extends Model
 
     public function getMascaraIdOptions(){
         return Mascara::lists('nome','id');
+    }
+
+    public function scopeAtivos($query)
+    {
+      return $query->where('ativo','=',1)->get();
     }
 }

@@ -1,6 +1,7 @@
 <?php namespace AdrisonLuz\NanoCms\Components;
 
 use Cms\Classes\ComponentBase;
+use AdrisonLuz\NanoCms\Models\Field;
 
 class Fields extends ComponentBase
 {
@@ -8,8 +9,8 @@ class Fields extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'Fields Component',
-            'description' => 'No description provided yet...'
+            'name'        => 'Fields',
+            'description' => 'Lista todos os fields cadastrados.'
         ];
     }
 
@@ -27,13 +28,13 @@ class Fields extends ComponentBase
 
       public function onRun()
       {
-          $categorias = Categoria::all();
+          $fields = Field::with('pai')->ativos();
 
-          $this->page['categorias'] = $categorias;
+          $this->page['fields'] = $fields;
 
           // Debug
           if($this->property('debug') == 1){
-              dd(Categoria::all()->toArray());
+              dd($fields->toArray());
           }
       }
 

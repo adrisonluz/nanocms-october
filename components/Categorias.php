@@ -28,13 +28,13 @@ class Categorias extends ComponentBase
 
     public function onRun()
     {
-        $categorias = Categoria::ativos();
+        $categorias = Categoria::with('pai')->ativos();
 
         $this->page['categorias'] = $categorias;
 
         // Debug
         if($this->property('debug') == 1){
-            dd(Categoria::with('pai')->where('ativo','=',1)->get()->toArray());
+            dd($categorias->toArray());
         }
     }
 
