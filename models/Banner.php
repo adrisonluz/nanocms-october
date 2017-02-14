@@ -35,7 +35,10 @@ class Banner extends Model
     public $table = 'adrisonluz_nanocms_banners';
 
     public function getPaginaIdOptions(){
-        return Pagina::lists('titulo','id');
+        $paginas = Pagina::lists('titulo','id');
+        $paginas[0] = 'Todas';
+        
+        return $paginas;
     }
 
     public function scopeAtivos($query)

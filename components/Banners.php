@@ -28,9 +28,9 @@ class Banners extends ComponentBase
 
     public function onRun()
     {
-        $categorias = Banner::ativos();
+        $banners = Banner::ativos();
 
-        $this->page['categorias'] = $categorias;
+        $this->page['banners'] = $banners;
 
         // Debug
         if($this->property('debug') == 1){

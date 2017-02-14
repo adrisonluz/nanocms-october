@@ -57,7 +57,11 @@ fields:
         type: switch
     imagem:
         label: Imagem
-        span: auto
         oc.commentPosition: ''
         mode: image
-        type: mediafinder
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

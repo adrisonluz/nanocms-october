@@ -129,3 +129,24 @@
 1.0.44:
     - 'Updated table adrisonluz_nanocms_paginas'
     - builder_table_update_adrisonluz_nanocms_paginas_5.php
+1.0.45:
+    - 'Updated table adrisonluz_nanocms_banners'
+    - builder_table_update_adrisonluz_nanocms_banners_4.php
+1.0.46:
+    - 'Updated table adrisonluz_nanocms_banners'
+    - builder_table_update_adrisonluz_nanocms_banners_5.php
+1.0.47:
+    - 'Updated table adrisonluz_nanocms_agendas'
+    - builder_table_update_adrisonluz_nanocms_agendas_5.php
+1.0.48:
+    - 'Updated table adrisonluz_nanocms_categorias'
+    - builder_table_update_adrisonluz_nanocms_categorias_4.php
+1.0.49:
+    - 'Updated table adrisonluz_nanocms_galerias'
+    - builder_table_update_adrisonluz_nanocms_galerias_3.php
+1.0.50:
+    - 'Updated table adrisonluz_nanocms_posts'
+    - builder_table_update_adrisonluz_nanocms_posts_3.php
+1.0.51:
+    - 'Updated table adrisonluz_nanocms_paginas'
+    - builder_table_update_adrisonluz_nanocms_paginas_6.php

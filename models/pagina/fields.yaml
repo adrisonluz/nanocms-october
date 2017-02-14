@@ -24,6 +24,11 @@ fields:
         oc.commentPosition: ''
         span: auto
         type: textarea
+    galeria_id:
+        label: Galeria
+        oc.commentPosition: ''
+        span: right
+        type: dropdown
     ativo:
         label: Ativo
         span: right
@@ -31,12 +36,11 @@ fields:
         type: switch
     imagem:
         label: Imagem
+        oc.commentPosition: ''
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
         span: auto
-        oc.commentPosition: ''
-        mode: image
-        type: mediafinder
-    galeria_id:
-        label: Galeria
-        oc.commentPosition: ''
-        span: right
-        type: dropdown
+        type: fileupload
