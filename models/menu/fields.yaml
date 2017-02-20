@@ -8,11 +8,11 @@ fields:
         label: Tipo
         oc.commentPosition: ''
         options:
-            'Header Principal': header
-            'Header Secundário': header_sec
-            Footer: footer
-            Lateral: lateral
-            Especial: especial
+            header: 'Header Principal'
+            header_sec: 'Header Secundário'
+            footer: Footer
+            lateral: Lateral
+            especial: Especial
         span: auto
         type: dropdown
     ativo:
@@ -22,18 +22,9 @@ fields:
         type: switch
 tabs:
     fields:
-        repeater1:
-            label: Repeater
-            oc.commentPosition: ''
-            prompt: 'Add new item'
-            span: auto
-            type: repeater
-            tab: 'Tab 1'
-            form:
-                fields: {  }
         itens:
             label: Itens
-            span: full
             oc.commentPosition: ''
+            span: auto
             type: checkboxlist
-            tab: 'Tab 1'
+            tab: 'Itens de menu'

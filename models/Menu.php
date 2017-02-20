@@ -29,6 +29,15 @@ class Menu extends Model
      */
     public $table = 'adrisonluz_nanocms_menus';
 
+    public $belongsToMany = [
+        'itens' => [
+            'AdrisonLuz\NanoCms\Models\MenuItem', 
+            'table' => 'adrisonluz_nanocms_menu_menuitem',
+            'key' => 'menu_id',
+            'otherKey' => 'menuitem_id',
+        ]
+    ];
+    
     // Retorna todas as páginas
     public function getPaginaIdOptions(){
         $paginas = Pagina::lists('titulo','id');
@@ -39,5 +48,10 @@ class Menu extends Model
     // Retorna todos os itens de menu
     public function getItensOptions(){
         return MenuItem::lists('titulo','id');
+    }
+    
+    public function scopeAtivos($query)
+    {
+      return $query->where('ativo','=',1)->get();
     }
 }

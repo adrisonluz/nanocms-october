@@ -1,6 +1,7 @@
 <?php namespace AdrisonLuz\NanoCms\Components;
 
 use Cms\Classes\ComponentBase;
+use AdrisonLuz\NanoCms\Models\Menu;
 
 class Menus extends ComponentBase
 {
@@ -8,8 +9,8 @@ class Menus extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'Menus Component',
-            'description' => 'No description provided yet...'
+            'name'        => 'Menus',
+            'description' => 'Lista todos os menus cadastrados.'
         ];
     }
 
@@ -27,14 +28,14 @@ class Menus extends ComponentBase
 
       public function onRun()
       {
-          $categorias = Categoria::all();
+        $menus = Menu::with('itens.filhos')->ativos();
+          
+        $this->page['menus'] = $menus;
 
-          $this->page['categorias'] = $categorias;
-
-          // Debug
-          if($this->property('debug') == 1){
-              dd(Categoria::all()->toArray());
-          }
+        // Debug
+        if($this->property('debug') == 1){
+            dd($menus->toArray());
+        }
       }
 
 }

@@ -13,7 +13,7 @@ fields:
         label: Página
         oc.commentPosition: ''
         span: auto
-        type: text
+        type: dropdown
     link:
         label: Link
         oc.commentPosition: ''
