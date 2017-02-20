@@ -150,3 +150,18 @@
 1.0.51:
     - 'Updated table adrisonluz_nanocms_paginas'
     - builder_table_update_adrisonluz_nanocms_paginas_6.php
+1.0.52:
+    - 'Created table adrisonluz_nanocms_menus_menuitens'
+    - builder_table_create_adrisonluz_nanocms_menus_menuitens.php
+1.0.53:
+    - 'Updated table adrisonluz_nanocms_menus'
+    - builder_table_update_adrisonluz_nanocms_menus_2.php
+1.0.54:
+    - 'Updated table adrisonluz_nanocms_menus_menuitens'
+    - builder_table_update_adrisonluz_nanocms_menus_menuitens.php
+1.0.55:
+    - 'Updated table adrisonluz_nanocms_menus_menuitens'
+    - builder_table_update_adrisonluz_nanocms_menu_menuitem.php
+1.0.56:
+    - 'Updated table adrisonluz_nanocms_paginas'
+    - builder_table_update_adrisonluz_nanocms_paginas_7.php
