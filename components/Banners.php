@@ -28,10 +28,29 @@ class Banners extends ComponentBase
 
     public function onRun()
     {
-        $banners = Banner::ativos();
-
+        $bannersList = Banner::with('pagina')->ativos();
+        
+        $banners = [];
+        $modals = [];
+        $slides = [];
+        
+        foreach($bannersList as $banner){
+            switch($banner->tipo){
+                case 'slide':
+                    $slides[] = $banner;
+                break;
+                case 'modal':
+                    $modals[] = $banner;
+                break;
+            default:
+                $banners[] = $banner;
+            }
+        }
+        
         $this->page['banners'] = $banners;
-
+        $this->page['modals'] = $modals;
+        $this->page['slides'] = $slides;
+        
         // Debug
         if($this->property('debug') == 1){
             dd(Banner::with('pagina')->ativos()->toArray());
