@@ -34,8 +34,12 @@ tabs:
     fields:
         imagens:
             label: Imagens
-            span: auto
             oc.commentPosition: ''
             mode: image
-            type: mediafinder
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: full
+            type: fileupload
             tab: Imagens
