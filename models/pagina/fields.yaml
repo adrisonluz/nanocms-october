@@ -29,6 +29,10 @@ fields:
         oc.commentPosition: ''
         span: right
         type: dropdown
+    destaque:
+        label: Destaque
+        span: right
+        type: switch
     ativo:
         label: Ativo
         span: right
@@ -37,7 +41,7 @@ fields:
     imagem:
         label: Imagem
         oc.commentPosition: ''
-        mode: file
+        mode: image
         useCaption: true
         thumbOptions:
             mode: crop
