@@ -8,6 +8,7 @@ fields:
         label: 'Menu Item Pai'
         oc.commentPosition: ''
         span: auto
+        default: '0'
         type: dropdown
     pagina_id:
         label: Página
@@ -19,6 +20,15 @@ fields:
         oc.commentPosition: ''
         span: auto
         type: text
+    ordem:
+        label: Ordem
+        oc.commentPosition: ''
+        span: auto
+        type: number
+    externo:
+        label: 'Link externo'
+        span: auto
+        type: switch
     ativo:
         label: Ativo
         span: right

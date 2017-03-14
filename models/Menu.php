@@ -35,6 +35,7 @@ class Menu extends Model
             'table' => 'adrisonluz_nanocms_menu_menuitem',
             'key' => 'menu_id',
             'otherKey' => 'menuitem_id',
+            'order' => 'ordem asc',
         ]
     ];
     

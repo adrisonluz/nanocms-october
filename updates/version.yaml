@@ -165,3 +165,30 @@
 1.0.56:
     - 'Updated table adrisonluz_nanocms_paginas'
     - builder_table_update_adrisonluz_nanocms_paginas_7.php
+1.0.57:
+    - 'Updated table adrisonluz_nanocms_banners'
+    - builder_table_update_adrisonluz_nanocms_banners_6.php
+1.0.58:
+    - 'Updated table adrisonluz_nanocms_posts'
+    - builder_table_update_adrisonluz_nanocms_posts_4.php
+1.0.59:
+    - 'Updated table adrisonluz_nanocms_menusitens'
+    - builder_table_update_adrisonluz_nanocms_menusitens_2.php
+1.0.60:
+    - 'Created table adrisonluz_nanocms_form_pagina'
+    - builder_table_create_adrisonluz_nanocms_form_pagina.php
+1.0.61:
+    - 'Updated table adrisonluz_nanocms_forms'
+    - builder_table_update_adrisonluz_nanocms_forms_3.php
+1.0.62:
+    - 'Updated table adrisonluz_nanocms_paginas'
+    - builder_table_update_adrisonluz_nanocms_paginas_8.php
+1.0.63:
+    - 'Updated table adrisonluz_nanocms_menusitens'
+    - builder_table_update_adrisonluz_nanocms_menusitens_3.php
+1.0.64:
+    - 'Created table adrisonluz_nanocms_form_field'
+    - builder_table_create_adrisonluz_nanocms_form_field.php
+1.0.65:
+    - 'Updated table adrisonluz_nanocms_forms'
+    - builder_table_update_adrisonluz_nanocms_forms_4.php

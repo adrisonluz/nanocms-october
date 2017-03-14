@@ -21,11 +21,20 @@ class Form extends Model
      */
     public $timestamps = false;
 
-    // Permite JSON em fields
-    protected $jsonable = ['fields'];
-
-    public $belongsTo = [
-        'pagina' => ['AdrisonLuz\NanoCms\Models\Pagina']
+    public $belongsToMany = [
+        'paginas' => [
+            'AdrisonLuz\NanoCms\Models\Pagina',
+            'table' => 'adrisonluz_nanocms_form_pagina',
+            'key' => 'pagina_id',
+            'otherKey' => 'form_id',
+        ],
+        'fields' => [
+            'AdrisonLuz\NanoCms\Models\Field',
+            'table' => 'adrisonluz_nanocms_form_field',
+            'key' => 'form_id',
+            'otherKey' => 'field_id',
+            'order' => 'ordem asc'
+        ]
     ];
 
     /**
@@ -34,9 +43,8 @@ class Form extends Model
     public $table = 'adrisonluz_nanocms_forms';
 
     // Retorna todas as páginas
-    public function getPaginaIdOptions(){
+    public function getPaginasOptions(){
         $paginas = Pagina::lists('titulo','id');
-        $paginas[0] = 'Todas';
         return $paginas;
     }
 

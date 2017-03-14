@@ -13,6 +13,12 @@ navigation:
             - nanocms_agenda
         order: ''
         sideMenu:
+            banners:
+                label: Banners
+                url: adrisonluz/nanocms/banners
+                icon: icon-image
+                permissions:
+                    - nanocms_banners
             posts:
                 label: Posts
                 url: adrisonluz/nanocms/posts
@@ -25,12 +31,6 @@ navigation:
                 icon: icon-sitemap
                 permissions:
                     - nanocms_categorias
-            banners:
-                label: Banners
-                url: adrisonluz/nanocms/banners
-                icon: icon-image
-                permissions:
-                    - nanocms_banners
             paginas:
                 label: Páginas
                 url: adrisonluz/nanocms/paginas

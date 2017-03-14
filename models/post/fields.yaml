@@ -35,10 +35,16 @@ fields:
         type: dropdown
     conteudo:
         label: Conteúdo
-        size: ''
+        size: large
         oc.commentPosition: ''
         span: auto
         type: richeditor
+    resumo:
+        label: Resumo
+        size: small
+        oc.commentPosition: ''
+        span: auto
+        type: textarea
     destaque:
         label: Destaque
         span: right
@@ -52,5 +58,9 @@ fields:
         label: Imagem
         oc.commentPosition: ''
         mode: image
-        span: left
-        type: mediafinder
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

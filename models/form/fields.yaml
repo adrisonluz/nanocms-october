@@ -19,27 +19,27 @@ fields:
         oc.commentPosition: ''
         span: auto
         type: text
-    pagina_id:
-        label: Página
-        oc.commentPosition: ''
-        span: auto
-        type: dropdown
-    ordem:
-        label: Ordem
-        oc.commentPosition: ''
-        span: auto
-        type: number
-    resposta:
-        label: 'Resposta automárica'
-        size: small
-        oc.commentPosition: ''
-        span: auto
-        type: richeditor
     envio_email:
         label: 'Enviar para email'
         oc.commentPosition: ''
         span: auto
         type: text
+    botao:
+        label: 'Texto botão'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    resposta:
+        label: 'Resposta automárica'
+        size: small
+        oc.commentPosition: ''
+        span: left
+        type: richeditor
+    ordem:
+        label: Ordem
+        oc.commentPosition: ''
+        span: right
+        type: number
     ativo:
         label: Ativo
         span: right
@@ -53,3 +53,9 @@ tabs:
             oc.commentPosition: ''
             type: checkboxlist
             tab: Fields
+        paginas:
+            label: Páginas
+            oc.commentPosition: ''
+            span: auto
+            type: checkboxlist
+            tab: Páginas

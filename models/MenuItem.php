@@ -61,6 +61,6 @@ class MenuItem extends Model
 
     public function scopeAtivos($query)
     {
-      return $query->where('ativo','=',1)->get();
+      return $query->where('ativo','=',1)->oderBy('ordem')->get();
     }
 }

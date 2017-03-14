@@ -45,7 +45,7 @@ class Galerias extends ComponentBase
         $galerias = Galeria::ativos();
 
         $this->page['galerias'] = $galerias;
-        $this->page['page_slug'] = $this->property('page');
+        $this->page['page_galeria'] = $this->property('page');
 
         // Debug
         if($this->property('debug') == 1){

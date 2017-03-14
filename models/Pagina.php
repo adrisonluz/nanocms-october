@@ -20,13 +20,23 @@ class Pagina extends Model
      * Remove this line if timestamps are defined in the database table.
      */
     public $timestamps = false;
-    
+
     public $attachOne = [
         'imagem' => ['System\Models\File']
     ];
-    
-    public $hasOne = [
+
+    public $belongsTo = [
         'galeria' => ['AdrisonLuz\NanoCms\Models\Galeria']
+    ];
+
+    public $belongsToMany = [
+        'forms' => [
+            'AdrisonLuz\NanoCms\Models\Form',
+            'table' => 'adrisonluz_nanocms_form_pagina',
+            'key' => 'form_id',
+            'otherKey' => 'pagina_id',
+            'order' => 'ordem asc'
+        ]
     ];
 
     /**
@@ -38,7 +48,12 @@ class Pagina extends Model
     public function getGaleriaIdOptions(){
         $galerias = Galeria::lists('titulo','id');
         $galerias[0] = 'Nenhuma';
-            
+
         return $galerias;
+    }
+
+    public function scopeAtivos($query)
+    {
+      return $query->where('ativo','=',1)->orderBy('ordem')->get();
     }
 }

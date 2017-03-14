@@ -5,19 +5,19 @@ use October\Rain\Database\Updates\Migration;
 
 class BuilderTableUpdateAdrisonluzNanocmsPaginas2 extends Migration
 {
-    public function up()
-    {
-        Schema::table('adrisonluz_nanocms_paginas', function($table)
-        {
-            $table->dateTime('lixeira')->nullable()->change();
-        });
-    }
-    
-    public function down()
-    {
-        Schema::table('adrisonluz_nanocms_paginas', function($table)
-        {
-            $table->dateTime('lixeira')->nullable(false)->change();
-        });
+    public function up()
+    {
+        Schema::table('adrisonluz_nanocms_paginas', function($table)
+        {
+            $table->dateTime('lixeira')->nullable()->change();
+        });
+    }
+    
+    public function down()
+    {
+        Schema::table('adrisonluz_nanocms_paginas', function($table)
+        {
+            $table->dateTime('lixeira')->nullable(false)->change();
+        });
     }
 }

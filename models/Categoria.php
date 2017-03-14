@@ -24,6 +24,10 @@ class Categoria extends Model
     public $belongsTo = [
         'pai' => ['AdrisonLuz\NanoCms\Models\Categoria', 'key' => 'categoriapai_id', 'otherKey' => 'id']
     ];
+    
+    public $hasMany = [
+        'posts' => ['AdrisonLuz\NanoCms\Models\Post']
+    ];
 
     /**
      * @var string The database table used by the model.

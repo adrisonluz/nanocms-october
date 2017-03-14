@@ -26,6 +26,7 @@ fields:
         label: Máscara
         oc.commentPosition: ''
         span: auto
+        default: '0'
         type: dropdown
     tipo:
         label: Tipo

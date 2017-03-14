@@ -20,7 +20,16 @@ class Post extends Model
      * Remove this line if timestamps are defined in the database table.
      */
     public $timestamps = false;
+    
+    public $attachOne = [
+        'imagem' => ['System\Models\File']
+    ];
 
+    public $belongsTo = [
+        'categoria' => ['AdrisonLuz\NanoCms\Models\Categoria'],
+        'galeria' => ['AdrisonLuz\NanoCms\Models\Galeria']
+    ];
+    
     /**
      * @var string The database table used by the model.
      */
@@ -30,9 +39,17 @@ class Post extends Model
     public function getCategoriaIdOptions(){
         return Categoria::lists('titulo','id');
     }
-
+    
     // Retorna todas as galerias
     public function getGaleriaIdOptions(){
-        return Galeria::lists('titulo','id');
+        $galerias = Galeria::lists('titulo','id');
+        $galerias[0] = 'Nenhuma';
+
+        return $galerias;
+    }
+    
+    public function scopeAtivos($query)
+    {
+      return $query->where('ativo','=',1)->get();
     }
 }

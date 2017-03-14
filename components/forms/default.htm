@@ -1,3 +1,10 @@
-<p>This is the default markup for component Forms</p>
+<form
+    class="{{ form.class }} simple_form"
+    data-request="InternalForm::onSendForm"
+    onsubmit="javascript:return false;"
+    {% if successFunction %}data-request-success="{{successFunction}}; return false;"{% endif %}
+    enctype="multipart/form-data"
+>
 
-<small>You can delete this file if you want</small>
+    <input type="hidden" name="origem" value="{{form.origem}}" />
+    <input type="hidden" name="form_tipo" value="{{form.tipo}}" />
