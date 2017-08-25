@@ -7,6 +7,4 @@ Criar o diretório "adrisonluz" dentro da pasta "plugins" do October CMS. Clonar
 
 Rodar o comando 
 
---
-php artisan october:up
---
+`php artisan october:up`
