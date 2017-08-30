@@ -85,39 +85,52 @@ permissions:
     nanocms_geral:
         tab: 'Nano CMS'
         label: 'Nano CMS | Geral'
-    nanocms_agenda:
-        tab: 'Nano CMS'
-        label: 'Nano CMS | Agenda'
-    nanocms_banners:
-        tab: 'Nano CMS'
-        label: 'Nano CMS | Banners'
-    nanocms_blocos:
-        tab: 'Nano CMS'
-        label: 'Nano CMS | Blocos'
-    nanocms_categorias:
-        tab: 'Nano CMS'
-        label: 'Nano CMS | Categorias'
-    nanocms_fields:
-        tab: 'Nano CMS'
-        label: 'Nano CMS | Fields'
-    nanocms_forms:
-        tab: 'Nano CMS'
-        label: 'Nano CMS | Forms'
-    nanocms_galerias:
-        tab: 'Nano CMS'
-        label: 'Nano CMS | Galerias'
-    nanocms_menus:
-        tab: 'Nano CMS'
-        label: 'Nano CMS | Menus'
-    nanocms_paginas:
-        tab: 'Nano CMS'
-        label: 'Nano CMS | Páginas'
-    nanocms_posts:
-        tab: 'Nano CMS'
-        label: 'Nano CMS | Posts'
-    nanocms_seo:
-        tab: 'Nano CMS'
-        label: 'Nano CMS | SEO'
+        order: 1
     nanocms_dashboard:
         tab: 'Nano CMS'
         label: 'Nano CMS | Dashboard'
+        order: 1
+    nanocms_agenda:
+        tab: 'Nano CMS'
+        label: 'Nano CMS | Agenda'
+        order: 10
+    nanocms_banners:
+        tab: 'Nano CMS'
+        label: 'Nano CMS | Banners'
+        order: 2
+    nanocms_blocos:
+        tab: 'Nano CMS'
+        label: 'Nano CMS | Blocos'
+        order: 12
+    nanocms_categorias:
+        tab: 'Nano CMS'
+        label: 'Nano CMS | Categorias'
+        order: 4
+    nanocms_fields:
+        tab: 'Nano CMS'
+        label: 'Nano CMS | Fields'
+        order: 8
+    nanocms_forms:
+        tab: 'Nano CMS'
+        label: 'Nano CMS | Forms'
+        order: 7
+    nanocms_galerias:
+        tab: 'Nano CMS'
+        label: 'Nano CMS | Galerias'
+        order: 6
+    nanocms_menus:
+        tab: 'Nano CMS'
+        label: 'Nano CMS | Menus'
+        order: 9
+    nanocms_paginas:
+        tab: 'Nano CMS'
+        label: 'Nano CMS | Páginas'
+        order: 5
+    nanocms_posts:
+        tab: 'Nano CMS'
+        label: 'Nano CMS | Posts'
+        order: 3
+    nanocms_seo:
+        tab: 'Nano CMS'
+        label: 'Nano CMS | SEO'
+        order: 11
