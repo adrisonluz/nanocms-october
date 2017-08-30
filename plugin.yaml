@@ -5,13 +5,13 @@ plugin:
     icon: oc-icon-cube
     homepage: ''
 navigation:
-    agenda:
+    geral:
         label: 'Nano CMS'
         url: adrisonluz/nanocms/banners
         icon: icon-cube
         permissions:
-            - nanocms_agenda
-        order: ''
+            - nanocms_geral
+        order: '10'
         sideMenu:
             banners:
                 label: Banners
@@ -82,6 +82,9 @@ navigation:
                 permissions:
                     - nanocms_agenda
 permissions:
+    nanocms_geral:
+        tab: 'Nano CMS'
+        label: 'Nano CMS | Geral'
     nanocms_agenda:
         tab: 'Nano CMS'
         label: 'Nano CMS | Agenda'

@@ -18,6 +18,6 @@ class Banners extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('AdrisonLuz.NanoCms', 'agenda', 'banners');
+        BackendMenu::setContext('AdrisonLuz.NanoCms', 'geral', 'banners');
     }
 }

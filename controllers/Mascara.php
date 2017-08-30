@@ -19,6 +19,6 @@ class Mascara extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('AdrisonLuz.NanoCms', 'agenda', 'mascaras');
+        BackendMenu::setContext('AdrisonLuz.NanoCms', 'geral', 'mascaras');
     }
 }

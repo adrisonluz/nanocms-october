@@ -17,6 +17,6 @@ class Paginas extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('AdrisonLuz.NanoCms', 'agenda', 'paginas');
+        BackendMenu::setContext('AdrisonLuz.NanoCms', 'geral', 'paginas');
     }
 }

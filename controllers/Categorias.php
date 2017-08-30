@@ -18,6 +18,6 @@ class Categorias extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('AdrisonLuz.NanoCms', 'agenda', 'categorias');
+        BackendMenu::setContext('AdrisonLuz.NanoCms', 'geral', 'categorias');
     }
 }

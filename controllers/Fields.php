@@ -19,6 +19,6 @@ class Fields extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('AdrisonLuz.NanoCms', 'agenda', 'fields');
+        BackendMenu::setContext('AdrisonLuz.NanoCms', 'geral', 'fields');
     }
 }

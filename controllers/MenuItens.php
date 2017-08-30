@@ -18,6 +18,6 @@ class MenuItens extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('AdrisonLuz.NanoCms', 'agenda', 'menu-itens');
+        BackendMenu::setContext('AdrisonLuz.NanoCms', 'geral', 'menu-itens');
     }
 }

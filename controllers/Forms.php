@@ -18,6 +18,6 @@ class Forms extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('AdrisonLuz.NanoCms', 'agenda', 'forms');
+        BackendMenu::setContext('AdrisonLuz.NanoCms', 'geral', 'forms');
     }   
 }
