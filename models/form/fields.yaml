@@ -15,10 +15,15 @@ fields:
         span: auto
         type: text
     tipo:
-        label: Tipo
+        label: Dropdown
         oc.commentPosition: ''
+        options:
+            simples: Simples
+            envios: Envios
+            comentarios: Comentários
         span: auto
-        type: text
+        default: simples
+        type: dropdown
     envio_email:
         label: 'Enviar para email'
         oc.commentPosition: ''

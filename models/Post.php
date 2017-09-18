@@ -29,6 +29,14 @@ class Post extends Model
         'categoria' => ['AdrisonLuz\NanoCms\Models\Categoria'],
         'galeria' => ['AdrisonLuz\NanoCms\Models\Galeria']
     ];
+
+    public $hasMany = [
+      'comentarios' => [
+          'AdrisonLuz\NanoCms\Models\Comentario',
+          'key' => 'id',
+          'otherKey' => 'post_id',
+      ],
+    ];
     
     /**
      * @var string The database table used by the model.
@@ -47,9 +55,9 @@ class Post extends Model
 
         return $galerias;
     }
-    
+
     public function scopeAtivos($query)
     {
-      return $query->where('ativo','=',1)->get();
+      return $query->where('ativo','=',1);
     }
 }

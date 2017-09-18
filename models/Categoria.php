@@ -21,6 +21,10 @@ class Categoria extends Model
      */
     public $timestamps = false;
 
+    public $attachOne = [
+        'imagem' => ['System\Models\File']
+    ];
+
     public $belongsTo = [
         'pai' => ['AdrisonLuz\NanoCms\Models\Categoria', 'key' => 'categoriapai_id', 'otherKey' => 'id']
     ];
@@ -44,6 +48,6 @@ class Categoria extends Model
 
     public function scopeAtivos($query)
     {
-      return $query->where('ativo','=',1)->get();
+      return $query->where('ativo','=',1);
     }
 }

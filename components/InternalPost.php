@@ -17,6 +17,16 @@ class InternalPost extends ComponentBase
     public function defineProperties()
       {
           return [
+            'getBy' => [
+                 'title'             => 'Buscar Por',
+                 'description'       => 'Permite escolher o método de busca.',
+                 'default'           => 'slug',
+                 'type'              => 'dropdown',
+                 'options'           => [
+                    'slug'  => 'Slug',
+                    'id' => 'ID'
+                 ]
+            ],
             'debug' => [
                  'title'             => 'Debug',
                  'description'       => 'Permite debugar o componente.',
@@ -25,17 +35,18 @@ class InternalPost extends ComponentBase
             ],
           ];
       }
-    
+
       public function onRun()
       {
-          $slug = $this->param('slug');
-          $post = Post::with('categoria','galeria')->where('slug','=',$slug)->first();
-          
-          $this->page['post'] = $post;
-          
+          $getBy = $this->property('getBy');
+          $post = Post::with('categoria','galeria')->where($getBy,'=',$this->param($getBy))->first();
+
+          $this->page["{$this->alias}"] = $post;
+
           // Debug
           if($this->property('debug') == 1){
-              dd($post->toArray());
+              echo '[Alias: ' . $this->alias . ']' . "\n";
+              dd($this->page["{$this->alias}"]->toArray());
           }
       }
 }

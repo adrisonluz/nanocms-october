@@ -21,14 +21,14 @@ columns:
         sortable: true
     destaque:
         label: Destaque
-        type: text
+        type: switch
         searchable: true
         sortable: true
     ativo:
         label: Ativo
-        type: text
+        type: switch
         searchable: true
         sortable: true
-    categoria_id:
+    categoria[titulo]:
         label: Categoria
         type: text

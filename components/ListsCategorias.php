@@ -15,27 +15,42 @@ class ListsCategorias extends ComponentBase
     }
 
     public function defineProperties()
-    {
-        return [
-          'debug' => [
-               'title'             => 'Debug',
-               'description'       => 'Permite debugar o componente.',
-               'default'           => false,
-               'type'              => 'checkbox',
-          ],
-        ];
-    }
+      {
+          return [
+            'order' => [
+                 'title'             => 'Ordem',
+                 'description'       => 'Permite escolher se a ordenação será ascendente ou descendente.',
+                 'default'           => 'asc',
+                 'type'              => 'dropdown',
+                 'options'           => [
+                    'asc'  => 'ASC',
+                    'desc' => 'DESC'
+                 ]
+            ],
+            'debug' => [
+                 'title'             => 'Debug',
+                 'description'       => 'Permite debugar o componente.',
+                 'default'           => false,
+                 'type'              => 'checkbox',
+            ],
+          ];
+      }
 
     public function onRun()
-    {
-        $categorias = Categoria::with('posts','pai')->ativos();
+      {
+          $categorias = Categoria::ativos();
+          $order = $this->property('order');
+          $categSlug = $this->page['categoria'];
 
-        $this->page['categorias'] = $categorias;
+          $categorias->orderBy('titulo', $order);          
 
-        // Debug
-        if($this->property('debug') == 1){
-            dd($categorias->toArray());
-        }
-    }
+          $this->page["{$this->alias}"] = $categorias->get();
 
+          // Debug
+          if($this->property('debug') == 1){
+              echo '[Alias: ' . $this->alias . "] \n";
+              echo '[Categoria Atual: ' . $categSlug . "] \n";
+              dd($this->page["{$this->alias}"]->toArray());
+          }
+      }
 }

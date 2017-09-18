@@ -1,13 +1,11 @@
 <?php namespace AdrisonLuz\NanoCms\Components;
 
 use Cms\Classes\ComponentBase;
-use Cms\Classes\Page;
 use AdrisonLuz\NanoCms\Models\Post;
 use AdrisonLuz\NanoCms\Models\Categoria;
 
 class ListsPosts extends ComponentBase
 {
-
     public function componentDetails()
     {
         return [
@@ -19,80 +17,103 @@ class ListsPosts extends ComponentBase
     public function defineProperties()
       {
           return [
+            'limit' => [
+                 'title'             => 'Limite',
+                 'description'       => 'Quantidade de Posts exibidos',
+                 'default'           => 2,
+                 'type'              => 'string',
+                 'validationPattern' => '^[0-9]+$',
+                 'validationMessage' => 'Por favor, insira apenas números.'
+            ],
+            'categoriaId' => [
+                'title' => 'Categoria',
+                'description' => 'Define categoria dos posts exibidos.',
+                'type' => 'dropdown',
+                'default' => 0
+            ],
+            'orderBy' => [
+                 'title'             => 'Ordenar Por',
+                 'description'       => 'Permite escolher o método de ordenação.',
+                 'default'           => 'data',
+                 'type'              => 'dropdown',
+                 'options'           => [
+                    'data'  => 'Data',
+                    'ordem' => 'Ordem'
+                 ],
+                 'group'             => 'Ordem'
+            ],
+            'order' => [
+                 'title'             => 'Tipo',
+                 'description'       => 'Permite escolher se a ordenação será ascendente ou descendente.',
+                 'default'           => 'asc',
+                 'type'              => 'dropdown',
+                 'options'           => [
+                    'asc'  => 'ASC',
+                    'desc' => 'DESC'
+                 ],
+                 'group'             => 'Ordem'
+            ],
             'debug' => [
                  'title'             => 'Debug',
                  'description'       => 'Permite debugar o componente.',
                  'default'           => false,
                  'type'              => 'checkbox',
             ],
-            'ordem' => [
-                'title' => 'Ordem',
-                'description' => 'Ordena a exibição dos posts.',
-                'type' => 'dropdown',
-                'options' => [
-                    'ASC' => 'Crescente', 
-                    'DESC' => 'Descendente',
-                    'manual' => 'Manual'
-                ],
-                'default' => 'manual'
-            ],
-            'limit' => [
-                'title' => 'Limite',
-                'description' => 'Limita a quantidade de posts exibidos. Deixar vazio exibe todos',
-                'type' => 'string',
-            ],
-            'categoria' => [
-                 'title' => 'Categorias',
-                 'type' => 'set',
-                 'description' => 'Selecione as categorias à serem exibidas. Deixar vazio para todas.',
-            ],
-            'destaque' => [
-                 'title'             => 'Destaque',
-                 'description'       => 'Retorna somente os posts com destaque.',
-                 'default'           => false,
-                 'type'              => 'checkbox',
-            ],
           ];
       }
-      
-      public function getCategoriaOptions(){
-          return Categoria::lists('titulo','titulo');
+
+      public function getCategoriaIdOptions()
+      {
+          $categorias = Categoria::lists('titulo', 'id');
+          $categorias[0] = 'Todas';
+          $categorias['din'] = 'Dinamico';
+          
+          return $categorias;
       }
-    
+
       public function onRun()
       {
-          $ordem = $this->property('ordem');
+          $posts = Post::ativos();
           $limit = $this->property('limit');
-          $categorias = $this->property('categoria'); 
+          $orderBy = $this->property('orderBy');
+          $order = $this->property('order');
+          $categoriaId = $this->property('categoriaId');
           $destaque = $this->property('destaque');
-          
-          $posts = Post::with('categoria.pai');
-          
-          if($ordem !== 'manual'){
-              $posts->orderBy('id',$ordem);
-          }else{
-              $posts->orderBy('ordem','ASC');
+
+          // Se destaque estiver ativo, busca apenas posts destaques
+          if($destaque == 1){
+            $posts->where('destaque','=',1);
           }
-          
-          if($destaque !== '')
-              $posts->where('destaque','=',1);
-          
-          if($categorias){
-              foreach($categorias as $catTitulo){
-                  $categoriaId = Categoria::select('id')->where('titulo',$catTitulo)->first();
-                  $categoriaArray[] = $categoriaId->id;
-              };
-              $posts->whereIn('categoria_id',$categoriaArray);
+
+          // Se categoria escolhida, busca somente os posts da mesma
+          if($categoriaId and ($categoriaId == 'din' and !empty($this->param('categoria')) or $categoriaId !== 'din')){
+            $categoria = Categoria::where('slug','=',$this->param('categoria'))->first();
+
+            if($categoria){
+              $categoriaId = $categoria->id;
+            }    
+
+            $posts->where('categoria_id','=',$categoriaId);
           }
-              
-          if($limit !== '')
-              $posts->limit($limit);              
-          
-          $this->page['posts'] = $posts->ativos();
+
+          // Ordena posts
+          $posts->orderBy($orderBy, $order);          
+
+          // Se houver limite selecionado, busca apenas a quantidade setada
+          if(count($limit) > 0){
+            $posts->limit($limit);            
+          }
+
+          $this->page["{$this->alias}"] = $posts->get();
 
           // Debug
           if($this->property('debug') == 1){
-              dd($this->page['posts']->toArray());
+              echo '[Alias: ' . $this->alias . ']' . "\n";
+
+              if($categoria){
+                echo '[Categoria Atual: ' . $categoria->titulo . "] \n";
+              }
+              dd($this->page["{$this->alias}"]->toArray());
           }
       }
 }
