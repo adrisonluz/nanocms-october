@@ -33,8 +33,14 @@ class Post extends Model
     public $hasMany = [
       'comentarios' => [
           'AdrisonLuz\NanoCms\Models\Comentario',
-          'key' => 'id',
-          'otherKey' => 'post_id',
+          'key' => 'post_id',
+          'otherKey' => 'id',
+          'scope' => 'ativos'
+      ],
+      'comentarios_all' => [
+          'AdrisonLuz\NanoCms\Models\Comentario',
+          'key' => 'post_id',
+          'otherKey' => 'id',
       ],
     ];
     

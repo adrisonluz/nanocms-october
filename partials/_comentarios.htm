@@ -1,0 +1,45 @@
+<?php
+	$post = $this->vars['formModel'];
+	$comentarios = $post->comentarios_all;
+?>
+<table class="table table-stripped table-borded">
+	<thead>
+		<?php		 
+			$first = true;
+		 	foreach($comentarios as $com){
+		 		if($first == true){
+			 		$dados = json_decode($com->dados);
+			 		echo '<tr>';
+			 		foreach ($dados as $key => $val) {			 			
+		 				echo '<td>' . $key . '</td>';
+			 		}
+			 		echo '<td></td>';
+		 			echo '</tr>';
+	 			}
+		 		$first = false;
+		 	}
+		?>
+	</thead>
+	<tbody>
+		<?php		 
+		 	foreach($comentarios as $com){
+		 		$dados = json_decode($com->dados);
+		 		echo '<tr class="com_' . $com->id . '">';
+		 		foreach ($dados as $key => $val) {
+		 			echo '<td>' . $val . '</td>';
+		 		}
+		 		echo '<td>
+						<button type="button" style="height:auto;" class="oc-icon-trash-o btn-icon danger pull-right" data-request="onComDelete" data-load-indicator="Excluindo..." data-request-confirm="Você realmente deseja apagar este registro?" data-request-data="comentario_id:' . $com->id . '" data-request-success="javascript:deleteThis(\'com_' . $com->id . '\')">
+                		</button>
+                		<label class="custom-switch pull-right">
+							<input type="hidden" name="comentario_id" value="' . $com->id . '">
+						    <input type="checkbox" id="Form-field-Banner-ativo" name="status" value="' . $com->ativo . '" ' . ($com->ativo == 1 ? 'checked="checked"' : '') . ' data-request="onComAtivo" data-request-data="comentario_id:' . $com->id . '">
+						    <span><span>Lig</span><span>Desl</span></span>
+						    <a class="slide-button"></a>
+						</label>
+					  </td>';
+		 		echo '</tr>';
+		 	}
+		?>
+	</tbody>
+</table>

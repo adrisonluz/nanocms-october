@@ -1,10 +1,10 @@
 <form
-    class="{{ form.classe }} simple_form"
+    class="{{ __SELF__.classe }} simple_form"
     data-request="{{ __SELF__ }}::onSendForm"
     onsubmit="javascript:return false;"
     {% if successFunction %}data-request-success="{{successFunction}}; return false;"{% endif %}
     enctype="multipart/form-data"
 >
 
-    <input type="hidden" name="origem" value="{{form.origem}}" />
-    <input type="hidden" name="form_tipo" value="{{form.tipo}}" />
+    <input type="hidden" name="origem" value="{{__SELF__.origem}}" />
+    <input type="hidden" name="form_tipo" value="{{__SELF__.tipo}}" />

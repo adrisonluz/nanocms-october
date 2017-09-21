@@ -39,7 +39,7 @@ class InternalPost extends ComponentBase
       public function onRun()
       {
           $getBy = $this->property('getBy');
-          $post = Post::with('categoria','galeria')->where($getBy,'=',$this->param($getBy))->first();
+          $post = Post::with('categoria','galeria','comentarios')->where($getBy,'=',$this->param($getBy))->first();
 
           $this->page["{$this->alias}"] = $post;
 

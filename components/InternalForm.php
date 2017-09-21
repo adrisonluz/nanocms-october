@@ -62,6 +62,7 @@ class InternalForm extends ComponentBase
           $form = null;
         }
 
+        $this->nome = $form->titulo;
         $this->page["{$this->alias}"] = $form;
 
         // Debug
@@ -95,6 +96,30 @@ class InternalForm extends ComponentBase
       $templete = 'default';
       $subject = 'Site | ' . $form->label;
       
+      // Campos que serão desconsiderados
+      $keyValid = [
+        'form_tipo', 
+        'form_id',
+        'post_id', 
+        'origem', 
+        'comentario_id'
+      ];
+
+      $vars = [];
+      $dados = [];
+      foreach (post() as $key => $value) {
+          if (!in_array($key, $keyValid)) {
+              $val = (is_array($value) ? implode(', ', $value) : $value);
+
+              $labelMail = Field::where('nome', '=', $key)->get();
+              if (count($labelMail) > 0)
+                  $key = $labelMail->first()->label;
+              
+              $vars[] = ['key' => $key, 'val' => $val];
+              $dados[$key] = $val;
+          }
+      }
+
       if ($form->envio_email !== '') {
           $file = (isset($_FILES['arquivo']) ? $_FILES['arquivo'] : '');
           $checkTemplate = MailTemplate::where('code', '=', $form->tipo)->get();
@@ -106,19 +131,6 @@ class InternalForm extends ComponentBase
               $subject = 'Site | ' . $form->titulo;
           }
 
-          $vars = [];
-          foreach (post() as $key => $value) {
-              if ($key !== 'form_tipo' and $key !== 'form_id' and $key !== 'origem' and $key !== 'comentario_id') {
-                  $val = (is_array($value) ? implode(', ', $value) : $value);
-
-                  $labelMail = Field::where('nome', '=', $key)->get();
-                  if (count($labelMail) > 0)
-                      $key = $labelMail->first()->label;
-                  
-                  $vars[] = ['key' => $key, 'val' => $val];
-              }
-          }
-
           // Envia notificação para email cadastrado
           Mail::send($templete, ['vars' => $vars], function ($m) use ($vars, $form, $file, $subject) {
               $m->to($form->envio_email)->subject($subject);
@@ -126,19 +138,22 @@ class InternalForm extends ComponentBase
                   $m->attach($file);
           });
 
-          switch ($form->tipo) {
-            case 'comentarios':
-              $comentario = new Comentario;
-              $comentario->post_id = $post_id;
-              $comentario->form_id = $form->id; 
-              $comentario->comentario_id = $comentario_id;
-              $comentario->status = 0;             
-            case 'envios':
-              
-              break;
-          }
-
           $msg .= 'Enviado com sucesso para ' . $form->envio_email . '!' . "\n";
+      }
+
+      switch ($form->tipo) {
+        case 'comentarios':
+          $comentario = new Comentario;
+          $comentario->post_id = $post_id;
+          $comentario->form_id = $form->id; 
+          $comentario->comentario_id = $comentario_id;
+          $comentario->ativo = 0;
+          $comentario->dados = json_encode($dados);      
+
+          $comentario->save();       
+        case 'envios':
+          
+          break;
       }
 
       // Envia resposta automática para email

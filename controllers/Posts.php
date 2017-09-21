@@ -2,6 +2,7 @@
 
 use Backend\Classes\Controller;
 use BackendMenu;
+use AdrisonLuz\NanoCms\Models\Comentario;
 
 class Posts extends Controller
 {
@@ -19,5 +20,22 @@ class Posts extends Controller
     {
         parent::__construct();
         BackendMenu::setContext('AdrisonLuz.NanoCms', 'geral', 'posts');
+        $this->addJs("/plugins/adrisonluz/nanocms/assets/js/post.js");
+    }
+
+    public function onComAtivo(){
+        $comentario_id = post('comentario_id');
+
+        $comentario = Comentario::find($comentario_id);
+        $comentario->ativo = ($comentario->ativo == 1 ? 0 : 1);
+
+        $comentario->save();
+    }
+
+    public function onComDelete(){
+        $comentario_id = post('comentario_id');
+
+        $comentario = Comentario::find($comentario_id);
+        $comentario->delete();
     }
 }

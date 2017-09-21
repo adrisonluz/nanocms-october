@@ -32,4 +32,22 @@ class Plugin extends PluginBase
     public function registerSettings()
     {
     }
+
+    // Custom filters and functions to Twig
+    public function registerMarkupTags()
+    {
+        return [
+            'filters' => [
+                'json_decode' => [$this, 'getJsonDecode']
+            ],
+            'functions' => [
+
+            ]
+        ];
+    }
+
+    public function getJsonDecode($string)
+    {
+        return json_decode($string);
+    }
 }

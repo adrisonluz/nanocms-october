@@ -1,66 +1,83 @@
-fields:
-    titulo:
-        label: Título
-        oc.commentPosition: ''
-        span: auto
-        type: text
-    slug:
-        label: Slug
-        oc.commentPosition: ''
-        span: auto
-        preset:
-            field: titulo
-            type: slug
-        type: text
-    data:
-        label: Data
-        oc.commentPosition: ''
-        mode: datetime
-        span: auto
-        type: datepicker
-    categoria_id:
-        label: Categoria
-        span: auto
-        oc.commentPosition: ''
-        type: dropdown
-    ordem:
-        label: Ordem
-        oc.commentPosition: ''
-        span: auto
-        type: number
-    galeria_id:
-        label: Galeria
-        oc.commentPosition: ''
-        span: auto
-        type: dropdown
-    conteudo:
-        label: Conteúdo
-        size: large
-        oc.commentPosition: ''
-        span: auto
-        type: richeditor
-    resumo:
-        label: Resumo
-        size: small
-        oc.commentPosition: ''
-        span: auto
-        type: textarea
-    destaque:
-        label: Destaque
-        span: right
-        type: switch
-    ativo:
-        label: Ativo
-        span: right
-        default: 1
-        type: switch
-    imagem:
-        label: Imagem
-        oc.commentPosition: ''
-        mode: image
-        useCaption: true
-        thumbOptions:
-            mode: crop
-            extension: auto
-        span: auto
-        type: fileupload
+tabs:
+    fields:
+        titulo:
+            tab: Post
+            label: Título
+            oc.commentPosition: ''
+            span: auto
+            type: text
+        slug:
+            tab: Post
+            label: Slug
+            oc.commentPosition: ''
+            span: auto
+            preset:
+                field: titulo
+                type: slug
+            type: text
+        data:
+            tab: Post
+            label: Data
+            oc.commentPosition: ''
+            mode: datetime
+            span: auto
+            type: datepicker
+        categoria_id:
+            tab: Post
+            label: Categoria
+            span: auto
+            oc.commentPosition: ''
+            type: dropdown
+        ordem:
+            tab: Post
+            label: Ordem
+            oc.commentPosition: ''
+            span: auto
+            type: number
+        galeria_id:
+            tab: Post
+            label: Galeria
+            oc.commentPosition: ''
+            span: auto
+            type: dropdown
+        conteudo:
+            tab: Post
+            label: Conteúdo
+            size: large
+            oc.commentPosition: ''
+            span: auto
+            type: richeditor
+        resumo:
+            tab: Post
+            label: Resumo
+            size: small
+            oc.commentPosition: ''
+            span: auto
+            type: textarea
+        destaque:
+            tab: Post
+            label: Destaque
+            span: right
+            type: switch
+        ativo:
+            tab: Post
+            label: Ativo
+            span: right
+            default: 1
+            type: switch
+        imagem:
+            tab: Post
+            label: Imagem
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+        comentarios:
+            span: full
+            path: $/adrisonluz/nanocms/partials/_comentarios.htm
+            type: partial
+            tab: Comentários
