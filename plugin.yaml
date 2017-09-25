@@ -7,7 +7,7 @@ plugin:
 navigation:
     geral:
         label: 'Nano CMS'
-        url: adrisonluz/nanocms/banners
+        url: adrisonluz/nanocms/posts
         icon: icon-cube
         permissions:
             - nanocms_geral

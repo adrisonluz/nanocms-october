@@ -79,7 +79,7 @@ class InternalForm extends ComponentBase
       $origem = post('origem');
       $post_id = post('post_id');
       $comentario_id = post('comentario_id');
-      $msg = '';
+      $msg = [];
 
       if(post('comentario_id')){
         $comentario_id = post('comentario_id');
@@ -122,7 +122,9 @@ class InternalForm extends ComponentBase
 
       if ($form->envio_email !== '') {
           $file = (isset($_FILES['arquivo']) ? $_FILES['arquivo'] : '');
-          $checkTemplate = MailTemplate::where('code', '=', $form->tipo)->get();
+          $codeTemplate = ($form->tipo == 'simples' ? strtolower($form->origem) : $form->tipo);
+
+          $checkTemplate = MailTemplate::where('code', '=', $codeTemplate)->get();
           if (count($checkTemplate) > 0) {
               $templete = $checkTemplate->first()->code;
               $subject = $checkTemplate->first()->subject;
@@ -138,7 +140,7 @@ class InternalForm extends ComponentBase
                   $m->attach($file);
           });
 
-          $msg .= 'Enviado com sucesso para ' . $form->envio_email . '!' . "\n";
+          $msg[] = 'Enviado com sucesso para ' . $form->envio_email . '!' . "\n";
       }
 
       switch ($form->tipo) {
@@ -166,13 +168,12 @@ class InternalForm extends ComponentBase
               $m->to($mailTo)->subject($subject);
           });
 
-          $msg .= 'Resposta automática enviada com sucesso para ' . $mailTo . '!' . "\n";
+          $msg[] = 'Resposta automática enviada com sucesso para ' . $mailTo . '!' . "\n";
         } catch (Exception $e) {
-            $msg .= 'Erro ao enviar resposta automática.' . "\n";
-            $msg .= 'Erro: ' . $e->getMessage() . "\n";
+            $msg[] = 'Erro ao enviar resposta automática. Erro: ' . $e->getMessage() . "\n";;
         }        
       }
 
-      die($msg);
+      return json_encode($msg);
     }
 }
