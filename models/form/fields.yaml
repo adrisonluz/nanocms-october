@@ -15,7 +15,7 @@ fields:
         span: auto
         type: text
     tipo:
-        label: Dropdown
+        label: Tipo
         oc.commentPosition: ''
         options:
             simples: Simples
