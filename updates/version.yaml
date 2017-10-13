@@ -197,16 +197,7 @@
     - builder_table_create_adrisonluz_nanocms_comentarios.php
 1.0.67:
     - 'Updated table adrisonluz_nanocms_forms'
-    - builder_table_update_adrisonluz_nanocms_forms_5.php
+    - builder_table_update_adrisonluz_nanocms_forms5.php
 1.0.68:
     - 'Updated table adrisonluz_nanocms_comentarios'
-    - builder_table_update_adrisonluz_nanocms_comentarios_4.php
-1.0.69:
-    - 'Updated table adrisonluz_nanocms_comentarios'
-    - builder_table_update_adrisonluz_nanocms_comentarios_5.php
-1.0.70:
-    - 'Updated table adrisonluz_nanocms_comentarios'
-    - builder_table_update_adrisonluz_nanocms_comentarios_6.php
-1.0.71:
-    - 'Updated table adrisonluz_nanocms_comentarios'
-    - builder_table_update_adrisonluz_nanocms_comentarios_7.php
+    - builder_table_update_adrisonluz_nanocms_comentarios4.php
