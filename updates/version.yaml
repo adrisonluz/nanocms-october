@@ -201,3 +201,6 @@
 1.0.68:
     - 'Updated table adrisonluz_nanocms_comentarios'
     - builder_table_update_adrisonluz_nanocms_comentarios4.php
+1.0.69:
+    - 'Updated table adrisonluz_nanocms_posts'
+    - builder_table_update_adrisonluz_nanocms_posts_5.php
