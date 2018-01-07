@@ -5,6 +5,9 @@ use AdrisonLuz\NanoCms\Models\Banner;
 
 class Banners extends ComponentBase
 {
+    public $banners = [];
+    public $modals = [];
+    public $slides = [];
 
     public function componentDetails()
     {
@@ -29,31 +32,36 @@ class Banners extends ComponentBase
     public function onRun()
     {
         $bannersList = Banner::with('pagina')->ativos();
-        
-        $banners = [];
-        $modals = [];
-        $slides = [];
+
+        $this->addCss('/plugins/adrisonluz/nanocms/assets/css/slick.css');
+        $this->addCss('/plugins/adrisonluz/nanocms/assets/css/slick-theme.css');
+        $this->addJs('/plugins/adrisonluz/nanocms/assets/js/slick.min.js');
+        $this->addJs('/plugins/adrisonluz/nanocms/assets/js/banner.js');
         
         foreach($bannersList as $banner){
             switch($banner->tipo){
                 case 'slide':
-                    $slides[] = $banner;
+                    $this->slides[] = $banner;
                 break;
                 case 'modal':
-                    $modals[] = $banner;
+                    $this->modals[] = $banner;
                 break;
             default:
-                $banners[] = $banner;
+                $this->banners[] = $banner;
             }
         }
-        
-        $this->page['banners'] = $banners;
-        $this->page['modals'] = $modals;
-        $this->page['slides'] = $slides;
-        
+
+        $this->page["{$this->alias}"] = [
+            'slides' => $this->slides,
+            'modals' => $this->modals,
+            'banners' => $this->banners
+        ];
+
         // Debug
         if($this->property('debug') == 1){
-            dd(Banner::with('pagina')->ativos()->toArray());
+            echo '[Alias: ' . $this->alias . ']' . "\n";
+            dd($this->page["{$this->alias}"]->toArray());
         }
     }
 }
+
