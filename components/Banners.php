@@ -20,6 +20,16 @@ class Banners extends ComponentBase
     public function defineProperties()
     {
         return [
+	  'order' => [
+		'title' => 'Ordem',
+		'description' => 'Ordenação dos banners.',
+		'type' => 'dropdown',
+		'default' => 'ASC',
+		'options' => [
+			'ASC' => 'Ascendente',
+			'DESC' => 'Descendente'
+		],
+	  ],
           'debug' => [
                'title'             => 'Debug',
                'description'       => 'Permite debugar o componente.',
@@ -31,7 +41,7 @@ class Banners extends ComponentBase
 
     public function onRun()
     {
-        $bannersList = Banner::with('pagina')->ativos();
+        $bannersList = Banner::with('pagina')->orderBy('ordem',$this->property('order'))->ativos();
 
         $this->addCss('/plugins/adrisonluz/nanocms/assets/css/slick.css');
         $this->addCss('/plugins/adrisonluz/nanocms/assets/css/slick-theme.css');
@@ -60,7 +70,7 @@ class Banners extends ComponentBase
         // Debug
         if($this->property('debug') == 1){
             echo '[Alias: ' . $this->alias . ']' . "\n";
-            dd($this->page["{$this->alias}"]->toArray());
+            dd($this->page["{$this->alias}"]);
         }
     }
 }
