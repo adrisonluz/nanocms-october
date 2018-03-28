@@ -74,7 +74,7 @@ class InternalForm extends ComponentBase
 
     // Enviar dados por email
     public function onSendForm(){
-      $form_id = post('form_id');
+      $form_id = $this->property('formId');
       $form_tipo = post('form_tipo');
       $origem = post('origem');
       $post_id = post('post_id');
