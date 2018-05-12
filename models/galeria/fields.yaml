@@ -2,28 +2,33 @@ fields:
     titulo:
         label: Título
         oc.commentPosition: ''
-        span: auto
+        span: left
         type: text
+    conteudo:
+        label: Conteúdo
+        size: large
+        oc.commentPosition: ''
+        span: right
+        type: richeditor
     slug:
         label: Slug
         oc.commentPosition: ''
-        span: auto
+        span: left
         preset:
             field: titulo
             type: slug
         type: text
-    conteudo:
-        label: Conteúdo
-        size: ''
-        oc.commentPosition: ''
-        span: auto
-        type: richeditor
     tipo:
         label: Tipo
         oc.commentPosition: ''
         options:
             Shadowbox: shadowbox
-        span: auto
+        span: left
+        type: dropdown
+    categoria_id:
+        label: Categoria
+        span: left
+        oc.commentPosition: ''
         type: dropdown
     ativo:
         label: Ativo

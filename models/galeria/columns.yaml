@@ -19,6 +19,9 @@ columns:
         type: text
         searchable: true
         sortable: true
+    categoria[titulo]:
+        label: Categoria
+        type: text
     ativo:
         label: Ativo
         type: text
