@@ -116,7 +116,7 @@ class ListsPosts extends ComponentBase
           if($this->property('debug') == 1){
               echo '[Alias: ' . $this->alias . ']' . "\n";
 
-              if($categoria){
+              if(isset($categoria)){
                 echo '[Categoria Atual: ' . $categoria->titulo . "] \n";
               }
               dd($this->page["{$this->alias}"]->toArray());
