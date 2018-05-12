@@ -58,7 +58,7 @@ class Galerias extends ComponentBase
 
     public function onRun()
     {
-        $galerias = Galeria::ativos();
+        $galerias = Galeria::where('ativo','=',1);
 	$categoriaId = $this->property('categoriaId');
 
         $this->page['page_galeria'] = $this->property('page');
@@ -80,7 +80,7 @@ class Galerias extends ComponentBase
         if($this->property('debug') == 1){
             echo '[Alias: ' . $this->alias . ']' . "\n";
 
-            if($categoria){
+            if(isset($categoria)){
               echo '[Categoria Atual: ' . $categoria->titulo . "] \n";
             }
             dd($this->page["{$this->alias}"]->toArray());
