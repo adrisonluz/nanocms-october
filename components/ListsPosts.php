@@ -31,6 +31,12 @@ class ListsPosts extends ComponentBase
                 'type' => 'dropdown',
                 'default' => 0
             ],
+	    'destaque' => [
+                 'title'             => 'Destaque',
+                 'description'       => 'Exibe somente os posts marcados como destaque.',
+                 'default'           => false,
+                 'type'              => 'checkbox',
+            ],
             'orderBy' => [
                  'title'             => 'Ordenar Por',
                  'description'       => 'Permite escolher o método de ordenação.',
