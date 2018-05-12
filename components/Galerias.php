@@ -3,6 +3,7 @@
 use Cms\Classes\ComponentBase;
 use Cms\Classes\Page;
 use AdrisonLuz\NanoCms\Models\Galeria;
+use AdrisonLuz\NanoCms\Models\Categoria;
 
 class Galerias extends ComponentBase
 {
