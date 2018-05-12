@@ -25,10 +25,19 @@ class Galeria extends Model
         'imagens' => ['System\Models\File']
     ];
 
+    public $belongsTo = [
+        'categoria' => ['AdrisonLuz\NanoCms\Models\Categoria']
+    ];
+
     /**
      * @var string The database table used by the model.
      */
     public $table = 'adrisonluz_nanocms_galerias';
+
+    // Retorna todas as categorias
+    public function getCategoriaIdOptions(){
+        return Categoria::lists('titulo','id');
+    }
     
     public function scopeAtivos($query)
     {
