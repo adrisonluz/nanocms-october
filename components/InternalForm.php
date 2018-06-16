@@ -5,6 +5,7 @@ use AdrisonLuz\NanoCms\Models\Form;
 use AdrisonLuz\NanoCms\Models\Field;
 use AdrisonLuz\NanoCms\Models\Pagina;
 use AdrisonLuz\NanoCms\Models\Comentario;
+use AdrisonLuz\NanoCms\Models\Envio;
 
 use File;
 use Schema;
@@ -107,6 +108,8 @@ class InternalForm extends ComponentBase
 
       $vars = [];
       $dados = [];
+      $postKeys = [];
+      $postValues = [];
       foreach (post() as $key => $value) {
           if (!in_array($key, $keyValid)) {
               $val = (is_array($value) ? implode(', ', $value) : $value);
@@ -115,6 +118,8 @@ class InternalForm extends ComponentBase
               if (count($labelMail) > 0)
                   $key = $labelMail->first()->label;
               
+              $postKeys[] = $key;
+              $postValues[] = $val;
               $vars[] = ['key' => $key, 'val' => $val];
               $dados[$key] = $val;
           }
@@ -152,9 +157,18 @@ class InternalForm extends ComponentBase
           $comentario->ativo = 0;
           $comentario->dados = json_encode($dados);      
 
-          $comentario->save();       
-        case 'envios':
+          $comentario->save();   
+          break;
           
+        case 'envios':
+          $envio = Envio::where('form_id', '=', $form->id)->first();
+          if(!$envio){
+            $envio = new Envio;
+            $envio->form_id = $form->id;
+          }
+
+          $envio->json_campos = json_encode($postKeys); 
+          $envio->save(); 
           break;
       }
 
