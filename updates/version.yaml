@@ -213,3 +213,6 @@
 1.0.72:
     - 'Updated table adrisonluz_nanocms_envios'
     - builder_table_update_adrisonluz_nanocms_envios.php
+1.0.73:
+    - 'Updated table adrisonluz_nanocms_envios'
+    - builder_table_update_adrisonluz_nanocms_envios_campos.php
