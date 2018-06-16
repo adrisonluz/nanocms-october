@@ -6,6 +6,7 @@ use AdrisonLuz\NanoCms\Models\Field;
 use AdrisonLuz\NanoCms\Models\Pagina;
 use AdrisonLuz\NanoCms\Models\Comentario;
 use AdrisonLuz\NanoCms\Models\EnvioCampo;
+use AdrisonLuz\NanoCms\Models\EnvioValor;
 
 use File;
 use Schema;
