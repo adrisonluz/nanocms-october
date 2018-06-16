@@ -207,3 +207,9 @@
 1.0.70:
     - 'Updated table adrisonluz_nanocms_galerias'
     - builder_table_update_adrisonluz_nanocms_galerias_4.php
+1.0.71:
+    - 'Created table adrisonluz_nanocms_envios'
+    - builder_table_create_adrisonluz_nanocms_envios.php
+1.0.72:
+    - 'Updated table adrisonluz_nanocms_envios'
+    - builder_table_update_adrisonluz_nanocms_envios.php
