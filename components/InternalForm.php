@@ -108,8 +108,6 @@ class InternalForm extends ComponentBase
 
       $vars = [];
       $dados = [];
-      $postKeys = [];
-      $postValues = [];
       foreach (post() as $key => $value) {
           if (!in_array($key, $keyValid)) {
               $val = (is_array($value) ? implode(', ', $value) : $value);
@@ -118,8 +116,6 @@ class InternalForm extends ComponentBase
               if (count($labelMail) > 0)
                   $key = $labelMail->first()->label;
               
-              $postKeys[] = $key;
-              $postValues[] = $val;
               $vars[] = ['key' => $key, 'val' => $val];
               $dados[$key] = $val;
           }
@@ -161,14 +157,28 @@ class InternalForm extends ComponentBase
           break;
 
         case 'envios':
+          $jsonCampos = [];
+          $jsonValores = [];
+
           $envioCampos = EnvioCampo::where('form_id', '=', $form->id)->first();
           if(!$envioCampos){
             $envioCampos = new EnvioCampo;
             $envioCampos->form_id = $form->id;
           }
 
-          $envioCampos->json_campos = json_encode($postKeys); 
-          $envioCampos->save(); 
+          foreach ($dados as $key => $value) {
+            $jsonCampos[] = $key;
+            $jsonValores[] = [$key => $value];
+          }
+
+          $envioCampos->json_campos = json_encode($jsonCampos); 
+          $envioCampos->save();
+
+          $envioValores =  new EnvioValor;
+          $envioValores->form_id = $form->id;
+          $envioValores->envio_campo_id = $envioCampos->id;
+          $envioValores->json_valores = json_decode($jsonValores);
+          $envioValores->save();
           break;
       }
 
