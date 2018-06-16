@@ -178,7 +178,7 @@ class InternalForm extends ComponentBase
           $envioValores =  new EnvioValor;
           $envioValores->form_id = $form->id;
           $envioValores->envio_campo_id = $envioCampos->id;
-          $envioValores->json_valores = json_decode($jsonValores);
+          $envioValores->json_valores = json_encode($jsonValores);
           $envioValores->save();
           break;
       }
