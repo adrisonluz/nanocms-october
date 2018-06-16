@@ -5,7 +5,7 @@ use AdrisonLuz\NanoCms\Models\Form;
 use AdrisonLuz\NanoCms\Models\Field;
 use AdrisonLuz\NanoCms\Models\Pagina;
 use AdrisonLuz\NanoCms\Models\Comentario;
-use AdrisonLuz\NanoCms\Models\Envio;
+use AdrisonLuz\NanoCms\Models\EnvioCampo;
 
 use File;
 use Schema;
@@ -159,16 +159,16 @@ class InternalForm extends ComponentBase
 
           $comentario->save();   
           break;
-          
+
         case 'envios':
-          $envio = Envio::where('form_id', '=', $form->id)->first();
-          if(!$envio){
-            $envio = new Envio;
-            $envio->form_id = $form->id;
+          $envioCampos = EnvioCampo::where('form_id', '=', $form->id)->first();
+          if(!$envioCampos){
+            $envioCampos = new EnvioCampo;
+            $envioCampos->form_id = $form->id;
           }
 
-          $envio->json_campos = json_encode($postKeys); 
-          $envio->save(); 
+          $envioCampos->json_campos = json_encode($postKeys); 
+          $envioCampos->save(); 
           break;
       }
 

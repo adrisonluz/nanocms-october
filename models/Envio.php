@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class Envio extends Model
+class EnvioCampo extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
@@ -18,5 +18,5 @@ class Envio extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'adrisonluz_nanocms_envios';
+    public $table = 'adrisonluz_nanocms_envios_campos';
 }
