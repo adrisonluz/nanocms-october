@@ -3,10 +3,12 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 
-class EnviosCampos extends Controller
+class Envios extends Controller
 {
-    public $implement = [    ];
+    public $implement = ['Backend\Behaviors\ListController'];
     
+    public $listConfig = 'config_list.yaml';
+
     public $requiredPermissions = [
         'nanocms_envios' 
     ];

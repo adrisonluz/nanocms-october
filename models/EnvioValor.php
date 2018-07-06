@@ -19,4 +19,9 @@ class EnvioValor extends Model
      * @var string The database table used by the model.
      */
     public $table = 'adrisonluz_nanocms_envios_valores';
+
+    public $belongsTo = [
+        'form' => ['AdrisonLuz\NanoCms\Models\Form'],
+	'envio' => ['AdrisonLuz\NanoCms\Models\EnvioCampo']
+    ];
 }

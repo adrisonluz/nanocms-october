@@ -1,0 +1,66 @@
+fields:
+    titulo:
+        label: Título
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    origem:
+        label: Origem
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    classe:
+        label: Classe
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    tipo:
+        label: Tipo
+        oc.commentPosition: ''
+        options:
+            simples: Simples
+            envios: Envios
+            comentarios: Comentários
+        span: auto
+        default: simples
+        type: dropdown
+    envio_email:
+        label: 'Enviar para email'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    botao:
+        label: 'Texto botão'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    resposta:
+        label: 'Resposta automárica'
+        size: small
+        oc.commentPosition: ''
+        span: left
+        type: richeditor
+    ordem:
+        label: Ordem
+        oc.commentPosition: ''
+        span: right
+        type: number
+    ativo:
+        label: Ativo
+        span: right
+        default: 1
+        type: switch
+tabs:
+    fields:
+        fields:
+            label: Fields
+            span: full
+            oc.commentPosition: ''
+            type: checkboxlist
+            tab: Fields
+        paginas:
+            label: Páginas
+            oc.commentPosition: ''
+            span: auto
+            type: checkboxlist
+            tab: Páginas
