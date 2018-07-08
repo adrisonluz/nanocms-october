@@ -11,15 +11,18 @@ columns:
         label: Tipo
         type: text
         searchable: true
-    pagina_id:
+    pagina_titulo:
         label: Página
-        type: text
-        searchable: true
+        relation: pagina
+        select: titulo
+        default: Todas
     data_ini:
         label: 'Data Ini'
         type: date
         searchable: true
+        default: Não selecionado
     data_fim:
         label: 'Data Fim'
         type: date
         searchable: true
+        default: Não selecionado
