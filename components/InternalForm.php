@@ -135,14 +135,17 @@ class InternalForm extends ComponentBase
               $subject = 'Site | ' . $form->titulo;
           }
 
-          // Envia notificação para email cadastrado
-          Mail::send($templete, ['vars' => $vars], function ($m) use ($vars, $form, $file, $subject) {
-              $m->to($form->envio_email)->subject($subject);
-              if ($file !== '')
-                  $m->attach($file);
-          });
+	  $destinations = explode(';',$form->envio_email);
+	  foreach($destinations as $destiny){
+          	// Envia notificação para email cadastrado
+          	Mail::send($templete, ['vars' => $vars], function ($m) use ($vars, $destiny, $file, $subject) {
+             		$m->to($destiny)->subject($subject);
+	                if ($file !== '')
+          	        $m->attach($file);
+          	});
 
-          $msg[] = 'Enviado com sucesso para ' . $form->envio_email . '!' . "\n";
+          	$msg[] = 'Enviado com sucesso para ' . $destiny . '!' . "\n";
+	  }
       }
 
       switch ($form->tipo) {
