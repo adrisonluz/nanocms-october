@@ -43,11 +43,13 @@ class Banner extends Model
 
     public function scopeAtivos($query)
     {
-      return $query->where('data_ini','>',date('Y-m-d h:i:s'))
-	->orWhere('data_ini','=',null)
-        ->where('data_fim','<',date('Y-m-d h:i:s'))
-	->orWhere('data_fim','=',null)
-	->where('ativo','=',1)
+      return $query->where('ativo','=',1)
+        ->where(function($query){
+           $query->whereNull('data_ini')->orWhere('data_ini','<',date('Y-m-d h:i:s'));
+	})
+	->where(function($query){
+           $query->whereNull('data_fim')->orWhere('data_fim','>',date('Y-m-d h:i:s'));
+        })
 	->get();
     }
 }
