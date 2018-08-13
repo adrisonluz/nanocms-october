@@ -36,15 +36,17 @@ fields:
         type: text
     resposta:
         label: 'Resposta automárica'
-        size: small
-        oc.commentPosition: ''
+        size: large
         span: left
         type: richeditor
     ordem:
         label: Ordem
-        oc.commentPosition: ''
-        span: right
+        span: auto
         type: number
+    callback:
+        label: 'Função Callback'
+        span: right
+        type: text
     ativo:
         label: Ativo
         span: right

@@ -219,3 +219,6 @@
 1.0.74:
     - 'Created table adrisonluz_nanocms_envios_valores'
     - builder_table_create_adrisonluz_nanocms_envios_valores.php
+1.0.75:
+    - 'Updated table adrisonluz_nanocms_forms'
+    - builder_table_update_adrisonluz_nanocms_forms_5.php
