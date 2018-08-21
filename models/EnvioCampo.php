@@ -1,4 +1,3 @@
-
 <?php namespace AdrisonLuz\NanoCms\Models;
 
 use Model;
