@@ -4,6 +4,17 @@ use System\Classes\PluginBase;
 
 class Plugin extends PluginBase
 {
+    public function pluginDetails()
+    {
+        return [
+            'name'        => 'Nano CMS',
+            'description' => 'Versão do Nano CMS para o October CMS',
+            'author'      => 'Adrison Luz',
+            'icon'        => 'icon-cube',
+            'homepage'    => 'https://github.com/adrisonluz/nanocms-october'
+        ];
+    }
+    
     public function registerComponents()
     {
       return [
