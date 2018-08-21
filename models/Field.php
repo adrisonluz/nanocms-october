@@ -26,7 +26,7 @@ class Field extends Model
     ];
 
     public $belongsTo = [
-        'pai' => ['AdrisonLuz\NanoCms\Models\Field', 'key' => 'inputpai_id', 'otherKey' => 'id']
+        'pai' => ['AdrisonLuz\NanoCms\Models\Field', 'key' => 'field_id', 'otherKey' => 'id']
     ];
 
     /**
@@ -39,6 +39,14 @@ class Field extends Model
         $mascaras[0] = 'Nenhuma';
 
         return $mascaras;
+    }
+
+    // Retorna fields cadastrados
+    public function getFieldIdOptions(){
+	$fields = Field::lists('nome','id');
+	$fields[0] = 'Nenhum';
+
+        return $fields;
     }
 
     public function scopeAtivos($query)

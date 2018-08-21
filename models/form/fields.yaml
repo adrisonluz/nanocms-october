@@ -66,3 +66,24 @@ tabs:
             span: auto
             type: checkboxlist
             tab: Páginas
+        conditional_select_id:
+            label: Select
+            span: auto
+            type: dropdown
+            tab: Condicionais
+        condicional:
+            label: Condicionais
+            prompt: Add
+            span: left
+            type: repeater
+            tab: Condicionais
+            form:
+                fields:
+                    conditional_option_value:
+                        label: Options
+                        span: auto
+                        type: dropdown
+                    conditional_email:
+                        label: Email
+                        span: auto
+                        type: text
