@@ -1,0 +1,11 @@
+title: Envios
+modelClass: AdrisonLuz\NanoCms\Models\EnvioValor
+list: $/adrisonluz/nanocms/models/envios/columns.yaml
+recordUrl: adrisonluz/nanocms/envios
+noRecordsMessage: No registers found
+showSetup: true
+showCheckboxes: true
+toolbar:
+     buttons: list_toolbar
+     search:
+prompt: 'backend::lang.list.search_prompt'

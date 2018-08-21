@@ -135,15 +135,11 @@ class InternalForm extends ComponentBase
               $subject = 'Site | ' . $form->titulo;
           }
 
-	  if(!empty($form->condicional)){
+	  if(!empty($form->condicional) && !empty($form->conditional_select_id)){
 	      $condicionalField = Field::find($form->conditional_select_id);
-              $condicionalOption = post($condicionalField->nome);
-
-	      foreach($form->condicional as $cond){
-		  if($cond['conditional_option_value'] == $condicionalOption){
-		      $getDestinations = $cond['conditional_email'];
-		  }
-	      }	     
+	      $condicionalField = post($form->conditional_select_id);
+	      
+	      dd($form->condicional, $vars);
 	  } else {
 	      $getDestinations = $form->envio_email;
 	  }

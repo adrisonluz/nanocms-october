@@ -30,7 +30,6 @@ fields:
         type: dropdown
     tipo:
         label: Tipo
-        oc.commentPosition: ''
         options:
             text: text
             select: select
@@ -42,6 +41,7 @@ fields:
             multicheckbox: multicheckbox
             hidden: hidden
             password: password
+            conditional: conditional
         span: auto
         type: dropdown
     ordem:
@@ -49,9 +49,14 @@ fields:
         oc.commentPosition: ''
         span: auto
         type: text
+    field_id:
+        label: 'Field pai'
+        span: auto
+        default: '0'
+        type: dropdown
     obrigatorio:
         label: Obrigatório
-        span: right
+        span: left
         type: switch
     ativo:
         label: Ativo

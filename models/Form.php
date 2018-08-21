@@ -20,6 +20,8 @@ class Form extends Model
      * Remove this line if timestamps are defined in the database table.
      */
     public $timestamps = false;
+   
+    protected $jsonable = ['condicional'];
 
     public $belongsToMany = [
         'paginas' => [
@@ -51,6 +53,43 @@ class Form extends Model
     // Retorna todos os fields
     public function getFieldsOptions(){
         return Field::lists('nome','id');
+    }
+ 
+    // Retorna options de um select condicional
+    public function getConditionalSelectIdOptions(){
+	$selectsCondicionais = [];
+
+        if(count($this->fields) > 0){
+            foreach($this->fields as $field){
+                if($field->tipo == 'conditional'){
+                    $selectsCondicionais[$field->id] = $field->nome;
+                }
+            }
+        }
+
+	return $selectsCondicionais;
+    }
+
+    public function getConditionalOptionValueOptions(){
+	$selectConditional = null;
+	$options = [];
+
+	if(count($this->fields) > 0){
+	    foreach($this->fields as $field){
+		if($field->tipo == 'conditional'){
+		    $selectConditional = $field;
+		}
+	    }
+	}
+
+	if($selectConditional !== null){
+	    $options = \AdrisonLuz\NanoCms\Models\Field::where([
+		'field_id' => $selectConditional->id,
+		'tipo' => 'option'
+	    ])->lists('nome','valor');
+	}
+
+	return $options;
     }
 
     public function scopeAtivos($query)
