@@ -67,7 +67,11 @@ class Forms extends ComponentBase
           if (count($checkTemplate) > 0) {
               $templete = $checkTemplate->first()->code;
               $subject = $checkTemplate->first()->subject;
-          } else {
+          } 
+          elseif (!empty(post('subject')) || !empty(post('assunto'))) {
+              $templete = 'default';
+              $subject = (!empty(post('subject')) ? post('subject') : post('assunto'));
+          }else {
               $templete = 'default';
               $subject = 'Site | ' . $form->titulo;
           }
