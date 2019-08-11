@@ -22,7 +22,7 @@ class BuilderTableCreateAdrisonluzNanocmsFields extends Migration
             $table->integer('ordem');
             $table->boolean('ativo');
             $table->dateTime('lixeira')->nullable();
-            $table->integer('agent_id')->unsigned();
+            //$table->integer('agent_id')->unsigned();
         });
     }
     
@@ -31,3 +31,4 @@ class BuilderTableCreateAdrisonluzNanocmsFields extends Migration
         Schema::dropIfExists('adrisonluz_nanocms_fields');
     }
 }
+

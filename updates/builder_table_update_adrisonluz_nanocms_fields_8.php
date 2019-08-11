@@ -9,7 +9,6 @@ class BuilderTableUpdateAdrisonluzNanocmsFields8 extends Migration
     {
         Schema::table('adrisonluz_nanocms_fields', function($table)
         {
-            $table->integer('agent_id')->default(null)->change();
             $table->integer('field_id')->default(null)->change();
             $table->text('conditional')->nullable()->unsigned(false)->default(null)->change();
         });
@@ -19,9 +18,9 @@ class BuilderTableUpdateAdrisonluzNanocmsFields8 extends Migration
     {
         Schema::table('adrisonluz_nanocms_fields', function($table)
         {
-            $table->integer('agent_id')->default(NULL)->change();
             $table->integer('field_id')->default(NULL)->change();
             $table->string('conditional', 255)->nullable()->unsigned(false)->default('NULL')->change();
         });
     }
 }
+

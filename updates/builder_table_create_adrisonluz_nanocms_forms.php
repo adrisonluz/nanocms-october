@@ -16,12 +16,12 @@ class BuilderTableCreateAdrisonluzNanocmsForms extends Migration
             $table->string('classe')->nullable();
             $table->string('origem')->nullable();
             $table->string('tipo');
-            $table->integer('ordem');
+            $table->integer('ordem')->default(0);
             $table->string('envio_email');
             $table->string('resposta');
             $table->boolean('ativo');
             $table->dateTime('lixeira')->nullable();
-            $table->integer('agent_id')->unsigned();
+            //$table->integer('agent_id')->unsigned();
         });
     }
     
@@ -30,3 +30,5 @@ class BuilderTableCreateAdrisonluzNanocmsForms extends Migration
         Schema::dropIfExists('adrisonluz_nanocms_forms');
     }
 }
+
+

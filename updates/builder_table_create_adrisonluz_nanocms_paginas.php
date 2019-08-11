@@ -17,7 +17,7 @@ class BuilderTableCreateAdrisonluzNanocmsPaginas extends Migration
             $table->string('slug');
             $table->boolean('ativo');
             $table->dateTime('lixeira');
-            $table->integer('agent_id');
+            //$table->integer('agent_id');
         });
     }
     
@@ -26,3 +26,4 @@ class BuilderTableCreateAdrisonluzNanocmsPaginas extends Migration
         Schema::dropIfExists('adrisonluz_nanocms_paginas');
     }
 }
+

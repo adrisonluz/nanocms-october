@@ -15,7 +15,7 @@ class BuilderTableCreateAdrisonluzNanocmsMenus extends Migration
             $table->string('tipo');
             $table->boolean('ativo');
             $table->dateTime('lixeira')->nullable();
-            $table->integer('agent_id')->unsigned();
+            //$table->integer('agent_id')->unsigned();
         });
     }
     
@@ -24,3 +24,4 @@ class BuilderTableCreateAdrisonluzNanocmsMenus extends Migration
         Schema::dropIfExists('adrisonluz_nanocms_menus');
     }
 }
+

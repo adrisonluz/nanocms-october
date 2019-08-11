@@ -10,7 +10,6 @@ class BuilderTableUpdateAdrisonluzNanocmsFields3 extends Migration
         Schema::table('adrisonluz_nanocms_fields', function($table)
         {
             $table->integer('input_id')->default(0)->change();
-            $table->integer('agent_id')->nullable()->default(0)->change();
         });
     }
     
@@ -19,7 +18,7 @@ class BuilderTableUpdateAdrisonluzNanocmsFields3 extends Migration
         Schema::table('adrisonluz_nanocms_fields', function($table)
         {
             $table->integer('input_id')->default(NULL)->change();
-            $table->integer('agent_id')->nullable(false)->default(null)->change();
         });
     }
 }
+

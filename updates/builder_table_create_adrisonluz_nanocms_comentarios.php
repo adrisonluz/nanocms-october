@@ -12,7 +12,7 @@ class BuilderTableCreateAdrisonluzNanocmsComentarios extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->integer('post_id')->unsigned();
-            $table->integer('comentario_id')->unsigned();
+            $table->integer('comentario_id')->unsigned()->nullable();
             $table->integer('form_id')->unsigned();
         });
     }
@@ -22,3 +22,4 @@ class BuilderTableCreateAdrisonluzNanocmsComentarios extends Migration
         Schema::dropIfExists('adrisonluz_nanocms_comentarios');
     }
 }
+

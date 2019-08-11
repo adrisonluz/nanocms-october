@@ -10,7 +10,6 @@ class BuilderTableUpdateAdrisonluzNanocmsForms5 extends Migration
         Schema::table('adrisonluz_nanocms_forms', function($table)
         {
             $table->string('callback')->nullable();
-            $table->integer('ordem')->default(1)->change();
         });
     }
     
@@ -19,7 +18,7 @@ class BuilderTableUpdateAdrisonluzNanocmsForms5 extends Migration
         Schema::table('adrisonluz_nanocms_forms', function($table)
         {
             $table->dropColumn('callback');
-            $table->integer('ordem')->default(NULL)->change();
         });
     }
 }
+

@@ -17,7 +17,7 @@ class BuilderTableCreateAdrisonluzNanocmsGalerias extends Migration
             $table->string('tipo');
             $table->boolean('ativo');
             $table->dateTime('lixeira')->nullable();
-            $table->integer('agent_id')->unsigned();
+            //$table->integer('agent_id')->unsigned();
             $table->string('slug');
             $table->text('conteudo')->nullable();
         });
@@ -28,3 +28,4 @@ class BuilderTableCreateAdrisonluzNanocmsGalerias extends Migration
         Schema::dropIfExists('adrisonluz_nanocms_galerias');
     }
 }
+

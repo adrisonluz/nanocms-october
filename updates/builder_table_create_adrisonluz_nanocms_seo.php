@@ -17,7 +17,7 @@ class BuilderTableCreateAdrisonluzNanocmsSeo extends Migration
             $table->string('h1')->nullable();
             $table->text('alt')->nullable();
             $table->text('span')->nullable();
-            $table->integer('agent_id')->unsigned();
+            //$table->integer('agent_id')->unsigned();
         });
     }
     
@@ -26,3 +26,4 @@ class BuilderTableCreateAdrisonluzNanocmsSeo extends Migration
         Schema::dropIfExists('adrisonluz_nanocms_seo');
     }
 }
+

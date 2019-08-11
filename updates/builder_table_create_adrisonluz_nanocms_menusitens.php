@@ -18,7 +18,7 @@ class BuilderTableCreateAdrisonluzNanocmsMenusitens extends Migration
             $table->integer('pagina_id')->nullable()->unsigned();
             $table->boolean('ativo');
             $table->dateTime('lixeira')->nullable();
-            $table->integer('agent_id')->unsigned();
+            //$table->integer('agent_id')->unsigned();
         });
     }
     
@@ -27,3 +27,4 @@ class BuilderTableCreateAdrisonluzNanocmsMenusitens extends Migration
         Schema::dropIfExists('adrisonluz_nanocms_menusitens');
     }
 }
+

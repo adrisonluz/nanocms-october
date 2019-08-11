@@ -10,7 +10,6 @@ class BuilderTableUpdateAdrisonluzNanocmsPaginas extends Migration
         Schema::table('adrisonluz_nanocms_paginas', function($table)
         {
             $table->increments('id')->unsigned(false)->change();
-            $table->integer('agent_id')->unsigned()->change();
         });
     }
     
@@ -19,7 +18,7 @@ class BuilderTableUpdateAdrisonluzNanocmsPaginas extends Migration
         Schema::table('adrisonluz_nanocms_paginas', function($table)
         {
             $table->increments('id')->unsigned()->change();
-            $table->integer('agent_id')->unsigned(false)->change();
         });
     }
 }
+

@@ -17,10 +17,10 @@ class BuilderTableCreateAdrisonluzNanocmsPosts extends Migration
             $table->dateTime('data');
             $table->string('slug');
             $table->boolean('destaque');
-            $table->integer('ordem');
+            $table->integer('ordem')->default(0);
             $table->boolean('ativo');
             $table->dateTime('lixeira')->nullable();
-            $table->integer('agent_id')->unsigned();
+            //$table->integer('agent_id')->unsigned();
         });
     }
     
@@ -29,3 +29,5 @@ class BuilderTableCreateAdrisonluzNanocmsPosts extends Migration
         Schema::dropIfExists('adrisonluz_nanocms_posts');
     }
 }
+
+

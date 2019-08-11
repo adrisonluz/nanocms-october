@@ -10,7 +10,6 @@ class BuilderTableUpdateAdrisonluzNanocmsFields7 extends Migration
         Schema::table('adrisonluz_nanocms_fields', function($table)
         {
             $table->string('conditional')->nullable();
-            $table->integer('agent_id')->default(null)->change();
             $table->integer('field_id')->default(null)->change();
         });
     }
@@ -20,8 +19,8 @@ class BuilderTableUpdateAdrisonluzNanocmsFields7 extends Migration
         Schema::table('adrisonluz_nanocms_fields', function($table)
         {
             $table->dropColumn('conditional');
-            $table->integer('agent_id')->default(NULL)->change();
             $table->integer('field_id')->default(NULL)->change();
         });
     }
 }
+

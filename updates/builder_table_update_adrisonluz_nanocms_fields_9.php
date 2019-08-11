@@ -10,7 +10,6 @@ class BuilderTableUpdateAdrisonluzNanocmsFields9 extends Migration
         Schema::table('adrisonluz_nanocms_fields', function($table)
         {
             $table->dateTime('lixeira')->default(null)->change();
-            $table->integer('agent_id')->default(null)->change();
             $table->integer('field_id')->default(null)->change();
             $table->dropColumn('conditional');
         });
@@ -21,9 +20,9 @@ class BuilderTableUpdateAdrisonluzNanocmsFields9 extends Migration
         Schema::table('adrisonluz_nanocms_fields', function($table)
         {
             $table->dateTime('lixeira')->default('NULL')->change();
-            $table->integer('agent_id')->default(NULL)->change();
             $table->integer('field_id')->default(NULL)->change();
             $table->text('conditional')->nullable()->default('NULL');
         });
     }
 }
+

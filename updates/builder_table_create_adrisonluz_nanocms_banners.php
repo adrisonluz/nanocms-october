@@ -19,10 +19,10 @@ class BuilderTableCreateAdrisonluzNanocmsBanners extends Migration
             $table->dateTime('data_ini');
             $table->dateTime('data_fim');
             $table->string('link');
-            $table->integer('ordem');
+            $table->integer('ordem')->default(0);
             $table->boolean('ativo');
             $table->dateTime('lixeira');
-            $table->integer('agent_id')->unsigned();
+            //$table->integer('agent_id')->unsigned()->nullable();
         });
     }
     
@@ -31,3 +31,5 @@ class BuilderTableCreateAdrisonluzNanocmsBanners extends Migration
         Schema::dropIfExists('adrisonluz_nanocms_banners');
     }
 }
+
+
