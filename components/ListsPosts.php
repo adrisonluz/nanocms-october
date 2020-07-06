@@ -106,7 +106,7 @@ class ListsPosts extends ComponentBase
           $posts->orderBy($orderBy, $order);          
 
           // Se houver limite selecionado, busca apenas a quantidade setada
-          if(count($limit) > 0){
+          if($limit){
             $posts->limit($limit);            
           }
 
@@ -123,3 +123,4 @@ class ListsPosts extends ComponentBase
           }
       }
 }
+
