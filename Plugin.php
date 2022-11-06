@@ -20,23 +20,24 @@ class Plugin extends PluginBase
       return [
         'AdrisonLuz\NanoCms\Components\Agenda' => 'agenda',
         'AdrisonLuz\NanoCms\Components\Banners' => 'banners',
-        //'AdrisonLuz\NanoCms\Components\Bloco' => 'blocos',
-        'AdrisonLuz\NanoCms\Components\ListsCategorias' => 'categorias',
-        'AdrisonLuz\NanoCms\Components\Fields' => 'fields',
-        'AdrisonLuz\NanoCms\Components\Forms' => 'form_list',
-        'AdrisonLuz\NanoCms\Components\InternalForm' => 'form',
-        'AdrisonLuz\NanoCms\Components\Galerias' => 'galerias',
-        'AdrisonLuz\NanoCms\Components\InternalGaleria' => 'galeria',
-        //'AdrisonLuz\NanoCms\Components\Mascara' => 'mascaras',
         'AdrisonLuz\NanoCms\Components\Menus' => 'menus',
         //'AdrisonLuz\NanoCms\Components\MenuItem' => 'menuItens',
-        //'AdrisonLuz\NanoCms\Components\OnlineViews' => 'onlineViews',
+        'AdrisonLuz\NanoCms\Components\Forms' => 'form_list',
+        'AdrisonLuz\NanoCms\Components\InternalForm' => 'form',
+        'AdrisonLuz\NanoCms\Components\Fields' => 'fields',
+        //'AdrisonLuz\NanoCms\Components\Mascara' => 'mascaras',
         'AdrisonLuz\NanoCms\Components\ListsPaginas' => 'paginas',
         'AdrisonLuz\NanoCms\Components\InternalPagina' => 'pagina',
-        'AdrisonLuz\NanoCms\Components\InternalPost' => 'post',
+        //'AdrisonLuz\NanoCms\Components\Bloco' => 'blocos',
+        'AdrisonLuz\NanoCms\Components\Galerias' => 'galerias',
+        'AdrisonLuz\NanoCms\Components\InternalGaleria' => 'galeria',
+        'AdrisonLuz\NanoCms\Components\ListsCategorias' => 'categorias',
+        'AdrisonLuz\NanoCms\Components\InternalCategoria' => 'categoria',
         'AdrisonLuz\NanoCms\Components\ListsPosts' => 'posts',
+        'AdrisonLuz\NanoCms\Components\InternalPost' => 'post',
         //'AdrisonLuz\NanoCms\Components\Seo' => 'seo',
         //'AdrisonLuz\NanoCms\Components\View' => 'views',
+        //'AdrisonLuz\NanoCms\Components\OnlineViews' => 'onlineViews',
       ];
     }
 
@@ -62,3 +63,4 @@ class Plugin extends PluginBase
         return json_decode($string);
     }
 }
+

@@ -1,16 +1,16 @@
 <?php namespace AdrisonLuz\NanoCms\Components;
 
 use Cms\Classes\ComponentBase;
-use AdrisonLuz\NanoCms\Models\Post;
+use AdrisonLuz\NanoCms\Models\Categoria;
 
-class InternalPost extends ComponentBase
+class InternalCategoria extends ComponentBase
 {
 
     public function componentDetails()
     {
         return [
-            'name'        => 'Internal Post',
-            'description' => 'Lista informações sobre o post selecionado.'
+            'name'        => 'Internal Categoria',
+            'description' => 'Lista informações sobre a categoria selecionada.'
         ];
     }
 
@@ -39,13 +39,13 @@ class InternalPost extends ComponentBase
       public function onRun()
       {
           $getBy = $this->property('getBy');
-          $post = Post::with('categoria','galeria','comentarios')->where($getBy,'=',$this->param($getBy))->first();
+          $category = Categoria::where($getBy,'=',$this->param('categoria'))->first();
 
-          $this->page["{$this->alias}"] = $post;
+          $this->page["{$this->alias}"] = $category;
 
           // Debug
           if($this->property('debug') == 1){
-             $debug = (!empty($post) ? $post->toArray() : 'Post não encontrado.');
+              $debug = (!empty($category) ? $category->toArray() : 'Categoria não encontrada.');
               echo '[Alias: ' . $this->alias . ']' . "\n";
               dd($debug);
           }
